@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { getDataTeams } from './datas';
 
 function App() {
+  const [datas, setDatas] = useState([]);
+  // load data
+  useEffect(() => {
+    async function infoLoad() {
+      const datas = await getDataTeams();
+      setDatas(datas);
+    }
+    infoLoad();
+  }, []);
+  console.log('teams', datas);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Hello World
+      {datas.map((data) => {
+        console.log(data);
+        return (
+          <div>
+            <p>team{data.name}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }
