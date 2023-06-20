@@ -1,31 +1,23 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import { getDataTeams } from './datas';
+import Home from './pages/Home';
 
 function App() {
-  const [datas, setDatas] = useState([]);
-  // load data
-  useEffect(() => {
-    async function infoLoad() {
-      const datas = await getDataTeams();
-      setDatas(datas);
-    }
-    infoLoad();
-  }, []);
-  console.log('teams', datas);
   return (
     <div className="App">
-      Hello World
-      {datas.map((data) => {
-        console.log(data);
-        return (
-          <div>
-            <p>team{data.name}</p>
-          </div>
-        );
-      })}
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
-
+/*         
+        <Route path="/menu" element={''} />
+        <Route path="/teams" element={''} />
+        <Route path="/players" element={''} />
+        <Route path="/game" element={''} />
+        <Route path="/state" element={''} />
+        <Route path="/erreur" element={''} />
+ */
 export default App;
