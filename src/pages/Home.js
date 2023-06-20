@@ -5,7 +5,6 @@ import React from 'react';
 export default function Home() {
   const [datasTeam, setDatasTeam] = useState([]);
   const [datasPlayer, setDatasPlayer] = useState([]);
-  // load data
   useEffect(() => {
     async function infoLoad() {
       const datas = await getDataTeams();
