@@ -9,11 +9,3 @@ root.render(
     <App />
   </Router>
 );
-
-/* 
-   <BrowserRouter basename="/app">
-      <Routes>
-        <Route path="/" /> 
-        </Routes>
-        </BrowserRouter>
-*/
