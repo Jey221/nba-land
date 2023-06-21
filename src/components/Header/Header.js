@@ -4,7 +4,7 @@ import logoNba from '../../assets/logos/SVG-nba.svg';
 // import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-// import NavBarHeader from './NavBarHeader';
+import NavBarHeader from './NavBarHeader';
 
 export default function Header() {
   return (
@@ -21,6 +21,7 @@ export default function Header() {
             />{' '}
             <p>Land</p>
           </Navbar.Brand>
+          <NavBarHeader />
         </Container>
       </Navbar>
     </div>

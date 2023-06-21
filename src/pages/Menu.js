@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { getDataPlayers, getDataTeams } from '../data/datas';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from '../components/Header/Header';
 
@@ -34,11 +34,23 @@ export default function Menu() {
         transition={{
           duration: 0.75,
         }}
-        className="nav-bar"
+        className="Menu"
       >
         <div initial="hidden" animate="show">
           <div>
             <div>Menu</div>
+            <Link to={'/teams'}>
+              <div>Teams</div>
+            </Link>
+            <Link to={'/players'}>
+              <div>Players</div>
+            </Link>
+            <Link to={'/games'}>
+              <div>Games</div>
+            </Link>
+            <Link to={'/states'}>
+              <div>States</div>
+            </Link>
           </div>
         </div>
       </motion.div>
