@@ -4,6 +4,7 @@ import logoNba from '../../assets/logos/SVG-nba.svg';
 // import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+// import NavBarHeader from './NavBarHeader';
 
 export default function Header() {
   return (
@@ -25,20 +26,3 @@ export default function Header() {
     </div>
   );
 }
-
-/* 
-<Navbar>
-        <Container>
-          <Navbar.Brand href="/">
-            <img
-              alt="logoHeader"
-              src={logoNba}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{' '}
-            Land
-          </Navbar.Brand>
-        </Container>
-      </Navbar>
-*/

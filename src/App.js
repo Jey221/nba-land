@@ -4,6 +4,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 import './css/App.css';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
+import Games from './pages/Games';
+import Teams from './pages/Teams';
+import Players from './pages/Players';
+import States from './pages/States';
 
 function App() {
   return (
@@ -34,10 +38,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
-            <Route path="/teams" element={''} />
-            <Route path="/players" element={''} />
-            <Route path="/game" element={''} />
-            <Route path="/state" element={''} />
+            <Route path="/teams" element={<Teams />} />
+            <Route path="/players" element={<Players />} />
+            <Route path="/games" element={<Games />} />
+            <Route path="/states" element={<States />} />
             <Route path="/erreur" element={''} />
           </Routes>
         </div>
