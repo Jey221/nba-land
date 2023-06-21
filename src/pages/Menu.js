@@ -2,8 +2,8 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { getDataPlayers, getDataTeams } from '../data/datas';
 import { Link } from 'react-router-dom';
-import logoBull from '../assets/logos/SVG-bulls.svg';
 import { motion } from 'framer-motion';
+import Header from '../components/Header/Header';
 
 export default function Menu() {
   const [datasTeam, setDatasTeam] = useState([]);
@@ -26,24 +26,26 @@ export default function Menu() {
   console.log('Players', datasPlayer);
 
   return (
-    <motion.div
-      initial={{ y: 25, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{
-        duration: 0.75,
-      }}
-      className="nav-bar"
-    >
-      <div initial="hidden" animate="show">
-        <div>
-          <img src={logoBull} alt="logoTest" />
-          <div>Menu</div>
-          <Link to={'/'}>
-            <div>retour</div>
-          </Link>
+    <div>
+      <Header />
+      <motion.div
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.75,
+        }}
+        className="nav-bar"
+      >
+        <div initial="hidden" animate="show">
+          <div>
+            <div>Menu</div>
+            <Link to={'/'}>
+              <div>retour</div>
+            </Link>
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }
 
