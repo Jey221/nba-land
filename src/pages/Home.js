@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getDataPlayers, getDataTeams } from '../data/datas';
+import logoNba from '../assets/logos/SVG-nba.svg';
+import '../css/pages/home.css';
 
 import React from 'react';
 export default function Home() {
@@ -21,5 +23,12 @@ export default function Home() {
     playerLoad();
   }, []);
   console.log('Players', datasPlayer);
-  return <div className="Home">NBA Land</div>;
+  return (
+    <div className="Home">
+      <div className="logoZone">
+        <img src={logoNba} alt="logo NBA" />
+        <h1>Land</h1>
+      </div>
+    </div>
+  );
 }
