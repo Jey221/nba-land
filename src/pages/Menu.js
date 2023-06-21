@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { getDataPlayers, getDataTeams } from '../data/datas';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from '../components/Header/Header';
 
@@ -39,9 +39,6 @@ export default function Menu() {
         <div initial="hidden" animate="show">
           <div>
             <div>Menu</div>
-            <Link to={'/'}>
-              <div>retour</div>
-            </Link>
           </div>
         </div>
       </motion.div>
