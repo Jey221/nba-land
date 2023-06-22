@@ -1,4 +1,79 @@
+.galleryMenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.galleryMenu a {
+  text-decoration: none;
+}
 .cardsMenu {
-  width: 500px;
-  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27em;
+  height: 18em;
+  background-color: #060b26;
+  border-radius: 10%;
+  margin-bottom: 5%;
+}
+#TeamsCards:hover {
+  transform: scale(1.1);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../../assets/images/allTeams.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#TeamsCards:active {
+  transform: scale(1.25);
+}
+#PlayersCards:hover {
+  transform: scale(1.1);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../../assets/images/allPlayers.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#PlayersCards:active {
+  transform: scale(1.25);
+}
+
+#GamesCards:hover {
+  transform: scale(1.1);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../../assets/images/allGames.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#GamesCards:active {
+  transform: scale(1.25);
+}
+#StatesCards:hover {
+  transform: scale(1.1);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../../assets/images/allStates.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#StatesCards:active {
+  transform: scale(1.25);
 }
