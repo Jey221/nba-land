@@ -1,0 +1,9 @@
+.Header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 1em;
+}
+.logoHeader a {
+  text-decoration: none;
+}
