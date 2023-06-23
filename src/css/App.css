@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0)
+    ),
+    url(../assets/images/backLogo.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 * {
   color: white;
