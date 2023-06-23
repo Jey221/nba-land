@@ -17,7 +17,7 @@ export default function Teams() {
       >
         <div initial="hidden" animate="show">
           <div>
-            <div>Teams</div>
+            <h2>Teams</h2>
             <GalleryTeams />
           </div>
         </div>
