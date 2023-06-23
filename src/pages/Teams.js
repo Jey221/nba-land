@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header/Header';
 import { motion } from 'framer-motion';
+import GalleryTeams from '../components/GalleryTeams';
 
 export default function Teams() {
   return (
@@ -17,6 +18,7 @@ export default function Teams() {
         <div initial="hidden" animate="show">
           <div>
             <div>Teams</div>
+            <GalleryTeams />
           </div>
         </div>
       </motion.div>
