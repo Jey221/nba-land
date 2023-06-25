@@ -1,17 +1,9 @@
-import { useEffect, useState } from 'react';
+/* import { useEffect, useState } from 'react';
 import { getDataTeams } from '../data/datas';
-
-const ModalTeam = () => {
-  const [datasTeam, setDatasTeam] = useState([]);
-
-  useEffect(() => {
-    async function teamLoad() {
-      const datas = await getDataTeams();
-      setDatasTeam(datas);
-    }
-    teamLoad();
-  }, []);
-  console.log('datasTeam', datasTeam);
+ */
+export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
+  console.log('selectedTeam', selectedTeam);
+  console.log('selectedTeam', selectedTeam.name);
 
   return (
     <div className="modalBackground">
@@ -21,6 +13,4 @@ const ModalTeam = () => {
       </div>
     </div>
   );
-};
-
-export default ModalTeam;
+}
