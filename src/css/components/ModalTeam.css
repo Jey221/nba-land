@@ -1,0 +1,50 @@
+.modalBackground {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalContent {
+  position: relative;
+  background: #060b26;
+  border-radius: 8px;
+  width: 250px;
+  padding: 20px 10px;
+  animation: 'dropTop .3s linear';
+}
+@keyframes dropTop {
+  0% {
+    transform: translateY(-100%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+}
+
+.modalHeader {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+/* 
+position: "relative",
+          background: "white",
+          borderRadius: "8px",
+          width: "250px",
+          padding: "20px 10px",
+          animation: "dropTop .3s linear"
+*/
+
+/* 
+.modalBackground
+.modalContent
+.modalHeader
+.modalBody
+
+*/
