@@ -4,9 +4,11 @@ import { useEffect, useState } from 'react';
 import { getDataTeams } from '../data/datas';
 import LOGOS from '../data/LogosTeams';
 import { Link } from 'react-router-dom';
+import ModalTeam from './ModalTeam';
 
 export default function GalleryTeams() {
   const [datasTeam, setDatasTeam] = useState([]);
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   useEffect(() => {
     async function teamLoad() {
@@ -15,7 +17,6 @@ export default function GalleryTeams() {
     }
     teamLoad();
   }, []);
-  console.log(datasTeam);
   return (
     <>
       <div className="GalleryTeams">
@@ -24,7 +25,7 @@ export default function GalleryTeams() {
 
           return (
             <div key={team.id}>
-              <Link to="#">
+              <Link onClick={setIsOpenModal.bind(this, true)}>
                 <img
                   src={logo}
                   alt={team.abbreviation}
@@ -35,6 +36,7 @@ export default function GalleryTeams() {
             </div>
           );
         })}
+        {isOpenModal && <ModalTeam setIsOpenModal={setIsOpenModal} />}
       </div>
     </>
   );
