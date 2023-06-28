@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header/Header';
-// import { motion } from 'framer-motion';
 import GalleryTeams from '../components/GalleryTeams';
 
 export default function Teams() {
@@ -16,17 +15,3 @@ export default function Teams() {
     </div>
   );
 }
-
-/* 
-      <motion.div
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          duration: 0.75,
-        }}
-        className="Menu"
-      >
-
-      </motion.div>
-
-*/

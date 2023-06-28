@@ -5,6 +5,7 @@ import { getDataTeams } from '../data/datas';
 import LOGOS from '../data/LogosTeams';
 import { Link } from 'react-router-dom';
 import ModalTeam from './ModalTeam';
+import { motion } from 'framer-motion';
 
 export default function GalleryTeams() {
   const [datasTeam, setDatasTeam] = useState([]);
@@ -29,16 +30,25 @@ export default function GalleryTeams() {
         {datasTeam.map((team) => {
           const logo = LOGOS[team.abbreviation];
           return (
-            <div key={team.id} className="teamCard">
-              <Link onClick={(e) => handleClick(e, team)}>
-                <img
-                  src={logo}
-                  alt={team.abbreviation}
-                  className="logoTeam"
-                  id={team.name}
-                />
-              </Link>
-            </div>
+            <motion.div
+              initial={{ x: 25, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 1,
+              }}
+              className="Menu"
+            >
+              <div key={team.id} className="teamCard">
+                <Link onClick={(e) => handleClick(e, team)}>
+                  <img
+                    src={logo}
+                    alt={team.abbreviation}
+                    className="logoTeam"
+                    id={team.name}
+                  />
+                </Link>
+              </div>
+            </motion.div>
           );
         })}
         {isOpenModal && (
@@ -51,3 +61,18 @@ export default function GalleryTeams() {
     </>
   );
 }
+/* 
+import { motion } from 'framer-motion';
+
+      <motion.div
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.75,
+        }}
+        className="Menu"
+      >
+
+      </motion.div>
+
+*/
