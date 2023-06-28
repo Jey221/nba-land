@@ -18,3 +18,10 @@
   width: 107px;
   margin: 0;
 }
+.teamCard {
+  margin: 10px;
+  transition: transform 0.3s;
+}
+.teamCard:hover {
+  transform: scale(2);
+}

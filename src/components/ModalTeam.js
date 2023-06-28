@@ -1,11 +1,22 @@
 import '../css/components/ModalTeam.css';
 import * as AiIcons from 'react-icons/ai';
 import LOGOS from '../data/LogosTeams';
+import ARENA from '../data/Arena';
 
 export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
-  console.log('selectedTeam', selectedTeam);
-  console.log('selectedTeam', selectedTeam.name);
   const logo = LOGOS[selectedTeam.abbreviation];
+  const arena = ARENA[selectedTeam.abbreviation];
+  const arenaStyle = {
+    backgroundImage: `url(${arena})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    width: '54%',
+    height: '260px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'baseline',
+  };
 
   return (
     <div className="modalBackground" onClick={setIsOpenModal.bind(this, false)}>
@@ -26,12 +37,12 @@ export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
             />
             <h2>{selectedTeam.name}</h2>
           </div>
-          <div className="infos">
+          <div className="infos" style={arenaStyle}>
             <ul>
-              <li>{selectedTeam.city}</li>
-              <li>{selectedTeam.conference}</li>
-              <li>{selectedTeam.division}</li>
-              <li>{selectedTeam.abbreviation}</li>
+              <li>City : {selectedTeam.city}</li>
+              <li>Conference : {selectedTeam.conference}</li>
+              <li>Division : {selectedTeam.division}</li>
+              <li>Abbreviation : {selectedTeam.abbreviation}</li>
             </ul>
           </div>
         </div>

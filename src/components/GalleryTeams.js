@@ -22,8 +22,6 @@ export default function GalleryTeams() {
   const handleClick = (e, team) => {
     setIsOpenModal(true);
     setSelectedTeam(team);
-    console.log('cible', e.target);
-    console.log('team', team);
   };
   return (
     <>
@@ -31,7 +29,7 @@ export default function GalleryTeams() {
         {datasTeam.map((team) => {
           const logo = LOGOS[team.abbreviation];
           return (
-            <div key={team.id}>
+            <div key={team.id} className="teamCard">
               <Link onClick={(e) => handleClick(e, team)}>
                 <img
                   src={logo}
