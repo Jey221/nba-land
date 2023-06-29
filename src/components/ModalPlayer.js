@@ -9,7 +9,7 @@ export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
   console.log(selectedPlayer);
   return (
     <div className="modalBackground" onClick={setIsOpenModal.bind(this, false)}>
-      <div className="modalContent" onClick={(e) => e.stopPropagation()}>
+      <div className="modalContentPlayer" onClick={(e) => e.stopPropagation()}>
         <div className="leftSection">
           <div className="photoPlayer">
             <img src={image} alt="joueur" style={{ width: '145px' }} />
@@ -19,7 +19,10 @@ export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
           </div>
         </div>
         <div className="rightSection">
-          <div className="closeZone" onClick={setIsOpenModal.bind(this, false)}>
+          <div
+            className="closeZonePlayer"
+            onClick={setIsOpenModal.bind(this, false)}
+          >
             <AiIcons.AiOutlineCloseCircle />
           </div>
 
