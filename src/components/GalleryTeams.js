@@ -37,6 +37,7 @@ export default function GalleryTeams() {
                 duration: 1,
               }}
               className="Menu"
+              key={team.id}
             >
               <div key={team.id} className="teamCard">
                 <Link onClick={(e) => handleClick(e, team)}>

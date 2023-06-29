@@ -19,11 +19,15 @@ export const getDataTeams = async () => {
   }
 };
 
-export const getDataPlayers = async () => {
+export const getDataPlayers = async (page, searchPlayer) => {
   const options = {
     method: 'GET',
     url: 'https://free-nba.p.rapidapi.com/players',
-    params: { page: '0', per_page: '25' },
+    params: {
+      page: page.toString(),
+      per_page: '100',
+      search: searchPlayer.toString(),
+    },
     headers: {
       'X-RapidAPI-Key': '3339d009a1mshbf92b48a34c61d6p17be4djsnb7ebebd1f53f',
       'X-RapidAPI-Host': 'free-nba.p.rapidapi.com',

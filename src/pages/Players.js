@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header/Header';
 import { motion } from 'framer-motion';
+import GalleryPlayers from '../components/GalleryPlayers';
 
 export default function Players() {
   return (
@@ -17,6 +18,7 @@ export default function Players() {
         <div initial="hidden" animate="show">
           <div>
             <div>Players</div>
+            <GalleryPlayers />
           </div>
         </div>
       </motion.div>

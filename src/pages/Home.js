@@ -17,7 +17,7 @@ export default function Home() {
       >
         <div initial="hidden" animate="show">
           <Link to={'/menu'}>
-            <div className="logoZone">
+            <div className="logoHome">
               <img id="logoNbaHome" src={logoNba} alt="logo NBA" />
               <h1>Land</h1>
             </div>
