@@ -25,7 +25,7 @@ export const getDataPlayers = async (page, searchPlayer) => {
     url: 'https://free-nba.p.rapidapi.com/players',
     params: {
       page: page.toString(),
-      per_page: '100',
+      per_page: '50',
       search: searchPlayer.toString(),
     },
     headers: {

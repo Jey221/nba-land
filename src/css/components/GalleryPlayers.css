@@ -2,4 +2,43 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 1.2em;
+}
+.playerCard {
+  background-color: #060b26;
+  width: 88px;
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  margin: 0.5em;
+}
+.playerCard a {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+.playerCard:hover {
+  transform: scale(1.2);
+  background-image: url(../../assets/images/backDunk.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.namePlayer {
+  margin-left: 0%;
+}
+.playerCard:hover .namePlayer {
+  color: #060b26;
+  background-color: rgba(255, 255, 255, 0.788);
+}
+.playerCard:hover a svg {
+  visibility: hidden;
+}
+.playerCard a svg {
+  font-size: 50px;
 }
