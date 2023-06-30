@@ -29,6 +29,7 @@ import logoTOR from '../assets/logos/SVG-raptors.svg';
 import logoUTA from '../assets/logos/SVG-jazz.svg';
 import logoWAS from '../assets/logos/SVG-wizards.svg';
 
+// création de variable réutilisable pour la mise en place des logo des équipes
 const LOGOS = {
   ATL: logoATL,
   BKN: logoBKN,

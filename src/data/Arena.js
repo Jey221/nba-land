@@ -1,3 +1,4 @@
+// lien vers image d'illustration des arènes
 const ARENA = {
   ATL: 'https://www.parlons-basket.com/wp-content/uploads/2018/11/atlanta-hawks-nba-salle-state-farm-arena-1024x663.jpg',
   BOS: 'https://www.parlons-basket.com/wp-content/uploads/2018/11/boston-celtics-salle-nba-td-garden-1024x576.jpg',

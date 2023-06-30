@@ -4,9 +4,9 @@ import image from '../assets/images/backDunk.jpg';
 import LOGOS from '../data/LogosTeams';
 
 export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
+  // liaison entre le logo et l'équipe
   const logo = LOGOS[selectedPlayer.team.abbreviation];
 
-  console.log(selectedPlayer);
   return (
     <div className="modalBackground" onClick={setIsOpenModal.bind(this, false)}>
       <div className="modalContentPlayer" onClick={(e) => e.stopPropagation()}>
@@ -45,23 +45,3 @@ export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
     </div>
   );
 }
-
-/* 
-<AiOutlineCloseCircle/>
-*/
-/* 
-  const logo = LOGOS[selectedTeam.abbreviation];
-  const arena = ARENA[selectedTeam.abbreviation];
-  const arenaStyle = {
-    backgroundImage: `url(${arena})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
-    width: '54%',
-    height: '260px',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'baseline',
-  };
-
-*/

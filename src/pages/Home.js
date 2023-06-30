@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import logoNba from '../assets/logos/SVG-nba.svg';
 import '../css/pages/home.css';
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -27,16 +26,3 @@ export default function Home() {
     </div>
   );
 }
-/* 
-    <motion.div
-      initial={{ y: 25, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{
-        duration: 0.75,
-      }}
-      className="nav-bar"
-    >
-      <div initial="hidden" animate="show">
-      </div>
-    </motion.div>
-*/

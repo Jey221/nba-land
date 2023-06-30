@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// Call API axios pour les données des équipes
 export const getDataTeams = async () => {
   const options = {
     method: 'GET',
@@ -19,6 +20,7 @@ export const getDataTeams = async () => {
   }
 };
 
+// Call API axios pour les données des joueurs
 export const getDataPlayers = async (page, searchPlayer) => {
   const options = {
     method: 'GET',

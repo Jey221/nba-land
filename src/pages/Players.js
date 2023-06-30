@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from '../components/Header/Header';
 import { motion } from 'framer-motion';
 import GalleryPlayers from '../components/GalleryPlayers';

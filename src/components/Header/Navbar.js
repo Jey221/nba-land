@@ -6,8 +6,10 @@ import { SidebarData } from '../../data/SidebarData';
 import '../../css/components/Navbar.css';
 
 export default function NavbarHeader() {
-  const [sidebar, setSidebar] = useState(false);
-  const showSidebar = () => setSidebar(!sidebar);
+  // mise en place des hooks
+  const [sidebar, setSidebar] = useState(false); // barre de navigation
+  const showSidebar = () => setSidebar(!sidebar); // fonction d'affichage de la barre de navigation
+
   return (
     <>
       <div className="navbar">

@@ -4,8 +4,11 @@ import LOGOS from '../data/LogosTeams';
 import ARENA from '../data/Arena';
 
 export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
+  // liaison entre les logos et les équipes
   const logo = LOGOS[selectedTeam.abbreviation];
+  // liaison entre les images d'arène et les équipes
   const arena = ARENA[selectedTeam.abbreviation];
+  // mise en forme de l'image de l'arène
   const arenaStyle = {
     backgroundImage: `url(${arena})`,
     backgroundSize: 'cover',

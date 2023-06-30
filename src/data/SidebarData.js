@@ -1,5 +1,6 @@
 import * as RiIcons from 'react-icons/ri';
 
+// données du menu Side Bar pour la navigation au Header
 export const SidebarData = [
   {
     title: 'Menu',

@@ -1,5 +1,3 @@
-import React from 'react';
-// import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from '../components/Header/Header';
 import CardsMenu from '../components/CardsMenu';
@@ -28,19 +26,3 @@ export default function Menu() {
     </div>
   );
 }
-
-/* 
-    <motion.div
-      initial={{ y: 25, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{
-        duration: 0.75,
-      }}
-      className="nav-bar"
-    >
-      <div initial="hidden" animate="show">
-      </div>
-    </motion.div>
-
-
-*/

@@ -1,4 +1,3 @@
-import React from 'react';
 import '../css/components/GalleryTeams.css';
 import { useEffect, useState } from 'react';
 import { getDataTeams } from '../data/datas';
@@ -8,10 +7,12 @@ import ModalTeam from './ModalTeam';
 import { motion } from 'framer-motion';
 
 export default function GalleryTeams() {
-  const [datasTeam, setDatasTeam] = useState([]);
-  const [isOpenModal, setIsOpenModal] = useState(false);
-  const [selectedTeam, setSelectedTeam] = useState(null);
+  // mise en place des hooks
+  const [datasTeam, setDatasTeam] = useState([]); // données des équipes
+  const [isOpenModal, setIsOpenModal] = useState(false); //ouverture de la modale
+  const [selectedTeam, setSelectedTeam] = useState(null); //équipe sélectionnée
 
+  // récupération des données des équipes
   useEffect(() => {
     async function teamLoad() {
       const datas = await getDataTeams();
@@ -20,14 +21,17 @@ export default function GalleryTeams() {
     teamLoad();
   }, []);
 
+  // click sur carte des équipes
   const handleClick = (e, team) => {
     setIsOpenModal(true);
     setSelectedTeam(team);
   };
+
   return (
     <>
       <div className="GalleryTeams">
         {datasTeam.map((team) => {
+          // liaison entre le logo et l'équipe
           const logo = LOGOS[team.abbreviation];
           return (
             <motion.div
@@ -36,7 +40,6 @@ export default function GalleryTeams() {
               transition={{
                 duration: 1,
               }}
-              className="Menu"
               key={team.id}
             >
               <div key={team.id} className="teamCard">
@@ -62,18 +65,3 @@ export default function GalleryTeams() {
     </>
   );
 }
-/* 
-import { motion } from 'framer-motion';
-
-      <motion.div
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          duration: 0.75,
-        }}
-        className="Menu"
-      >
-
-      </motion.div>
-
-*/

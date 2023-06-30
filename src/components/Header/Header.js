@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../css/components/Header.css';
 import logoNba from '../../assets/logos/SVG-nba.svg';
 import { Link } from 'react-router-dom';

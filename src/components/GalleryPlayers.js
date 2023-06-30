@@ -8,19 +8,24 @@ import * as AiIcons from 'react-icons/ai';
 import ModalPlayer from './ModalPlayer';
 
 export default function GalleryPlayers() {
-  const [dataPlayer, setDataPlayer] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [searchField, setSearchField] = useState('');
-  const [isOpenModal, setIsOpenModal] = useState(false);
-  const [selectedPlayer, setSelectedPlayer] = useState(null);
+  // mise en place des hooks
+  const [dataPlayer, setDataPlayer] = useState([]); // données des joueurs
+  const [currentPage, setCurrentPage] = useState(1); // page actuelle
+  const [searchField, setSearchField] = useState(''); // saisie pour recherche des joueurs
+  const [isOpenModal, setIsOpenModal] = useState(false); // ouverture de la modale
+  const [selectedPlayer, setSelectedPlayer] = useState(null); // joueur sélectionné
 
+  // saisie de la pagination
   const searchPagination = (e) => {
     setCurrentPage(e.target.value);
   };
+
+  // saisie de la recherche des joueurs
   const searchPlayer = (e) => {
     setSearchField(e.target.value);
   };
 
+  // récupération des données des joueurs
   useEffect(() => {
     async function playersLoad() {
       const datas = await getDataPlayers(currentPage, searchField);
@@ -29,10 +34,13 @@ export default function GalleryPlayers() {
     playersLoad();
   }, [currentPage, searchField]);
 
+  // click sur les joueurs pour ouverture de la modal
   const handleClick = (e, player) => {
     setIsOpenModal(true);
     setSelectedPlayer(player);
   };
+
+  // nettoyage de la saisie pour la recherche de joueur
   const inputRef = useRef(null);
   const clearInput = () => {
     if (inputRef.current) {
