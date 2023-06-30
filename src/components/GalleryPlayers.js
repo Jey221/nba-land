@@ -1,18 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { getDataPlayers } from '../data/datas';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../css/components/GalleryPlayers.css';
 import * as GiIcons from 'react-icons/gi';
+import * as AiIcons from 'react-icons/ai';
 import ModalPlayer from './ModalPlayer';
 
-/* 
-GiBasketballJersey
-GrFormNext
-GrFormPrevious
-import LOGOS from '../data/LogosTeams';
-import ModalTeam from './ModalTeam';
- */
 export default function GalleryPlayers() {
   const [dataPlayer, setDataPlayer] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -39,18 +33,30 @@ export default function GalleryPlayers() {
     setIsOpenModal(true);
     setSelectedPlayer(player);
   };
+  const inputRef = useRef(null);
+  const clearInput = () => {
+    if (inputRef.current) {
+      inputRef.current.value = '';
+      setSearchField('');
+    }
+  };
 
   return (
     <>
-      <p>Players</p>
-      <div>
+      <div className="searchZonePlayer">
         <label htmlFor="search">Search for a specific player : </label>
         <input
           id="search"
           className="searchInput"
           onChange={searchPlayer}
           style={{ color: 'black' }}
+          ref={inputRef}
+          type="text"
         ></input>
+        <AiIcons.AiOutlineCloseCircle
+          onClick={clearInput}
+          style={{ fontSize: '26px' }}
+        />
       </div>
       <div className="GalleryPlayers">
         {dataPlayer.map((player) => {
@@ -83,39 +89,16 @@ export default function GalleryPlayers() {
         )}
       </div>
       <div className="paginationZone">
-        <label htmlFor="pagination">Pages</label>
+        <label htmlFor="pagination">Pages : </label>
         <input
           id="pagination"
           className="paginationInput"
           onChange={searchPagination}
           style={{ color: 'black' }}
+          type="number"
+          min={1}
         ></input>
       </div>
     </>
   );
 }
-/* 
-      <div className="GalleryPlayers">
-        {dataPlayer.map((player) => {
-          return (
-            <motion.div
-              initial={{ x: 25, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{
-                duration: 1,
-              }}
-              className="Menu"
-              key={player.id}
-            >
-              <div className="playerCard">
-                <Link>
-                  {player.first_name}
-                  {player.last_name}
-                </Link>
-              </div>
-            </motion.div>
-          );
-        })}
-      </div>
-
-*/

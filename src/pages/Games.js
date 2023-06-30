@@ -12,7 +12,7 @@ export default function Games() {
         transition={{
           duration: 0.75,
         }}
-        className="Menu"
+        className=""
       >
         <div initial="hidden" animate="show">
           <div>

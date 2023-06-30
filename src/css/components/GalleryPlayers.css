@@ -4,6 +4,21 @@
   justify-content: space-around;
   padding: 1.2em;
 }
+.searchZonePlayer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3em;
+  align-items: center;
+}
+.paginationZone {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 4em;
+}
+.paginationZone input {
+  color: black;
+  width: 40px;
+}
 .playerCard {
   background-color: #060b26;
   width: 88px;

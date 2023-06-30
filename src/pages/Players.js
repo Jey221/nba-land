@@ -13,11 +13,10 @@ export default function Players() {
         transition={{
           duration: 0.75,
         }}
-        className="Menu"
       >
         <div initial="hidden" animate="show">
           <div>
-            <div>Players</div>
+            <h2>Players</h2>
             <GalleryPlayers />
           </div>
         </div>
