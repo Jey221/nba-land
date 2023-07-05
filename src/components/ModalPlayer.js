@@ -86,9 +86,9 @@ export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
 
                 <div id="infoPointGuard" className="infoPosition">
                   <ul>
-                    <li>POSITION : {Positions[1].Position}</li>
-                    <li>INFO : {Positions[1].Infos}</li>
-                    <li>PLAYER : {Positions[1].Players}</li>
+                    <li>POSITION : {Positions[0].Position}</li>
+                    <li>INFO : {Positions[0].Infos}</li>
+                    <li>PLAYER : {Positions[0].Players}</li>
                   </ul>
                 </div>
               </div>
@@ -103,9 +103,9 @@ export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
                 />
                 <div id="infoShootingGuard" className="infoPosition">
                   <ul>
-                    <li>POSITION : {Positions[2].Position}</li>
-                    <li>INFO : {Positions[2].Infos}</li>
-                    <li>PLAYER : {Positions[2].Players}</li>
+                    <li>POSITION : {Positions[1].Position}</li>
+                    <li>INFO : {Positions[1].Infos}</li>
+                    <li>PLAYER : {Positions[1].Players}</li>
                   </ul>
                 </div>
               </div>
