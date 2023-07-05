@@ -57,3 +57,51 @@
   padding: 1em;
   border-radius: 7px;
 }
+#park {
+  background-image: url(../../assets/images/terrain.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 220px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#closeBtnPark {
+  position: absolute;
+  top: 7px;
+  right: 0;
+}
+.ligneAvant,
+.ligneArriere {
+  display: flex;
+  justify-content: space-around;
+}
+.positions {
+  font-size: 35px;
+  fill: #060b26;
+}
+.positions.active {
+  fill: red;
+}
+.infoPosition {
+  display: none;
+  background-color: #060b26d5;
+  width: 367px;
+  position: absolute;
+  top: 0;
+  left: -369px;
+  border-radius: 5px;
+}
+#smallForward:hover #infoSmallForward,
+#center:hover #infoCenter,
+#powerForward:hover #infoPowerForward,
+#pointGuard:hover #infoPointGuard,
+#shootingGuard:hover #infoShootingGuard {
+  display: block;
+}
+.infoPosition ul {
+  font-size: small;
+}

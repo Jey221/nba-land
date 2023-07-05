@@ -36,7 +36,7 @@ export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
               src={logo}
               alt={selectedTeam.abbreviation}
               className="logoTeam"
-              id={selectedTeam.name}
+              id={selectedTeam.abbreviation}
             />
             <h2>{selectedTeam.name}</h2>
           </div>
