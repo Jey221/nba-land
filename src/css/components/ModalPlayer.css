@@ -103,5 +103,6 @@
   display: block;
 }
 .infoPosition ul {
+  list-style: none;
   font-size: small;
 }

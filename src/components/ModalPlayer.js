@@ -34,9 +34,9 @@ export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
                 />
                 <div id="infoSmallForward" className="infoPosition">
                   <ul>
-                    <li>Position : {Positions[2].Position}</li>
-                    <li>Infos : {Positions[2].Infos}</li>
-                    <li>Players : {Positions[2].Players}</li>
+                    <li>POSITION : {Positions[2].Position}</li>
+                    <li>INFO : {Positions[2].Infos}</li>
+                    <li>PLAYER : {Positions[2].Players}</li>
                   </ul>
                 </div>
               </div>
@@ -50,9 +50,9 @@ export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
                 />
                 <div id="infoCenter" className="infoPosition">
                   <ul>
-                    <li>Position : {Positions[4].Position}</li>
-                    <li>Infos : {Positions[4].Infos}</li>
-                    <li>Players : {Positions[4].Players}</li>
+                    <li>POSITION : {Positions[4].Position}</li>
+                    <li>INFO : {Positions[4].Infos}</li>
+                    <li>PLAYER : {Positions[4].Players}</li>
                   </ul>
                 </div>
               </div>
@@ -67,9 +67,9 @@ export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
                 />
                 <div id="infoPowerForward" className="infoPosition">
                   <ul>
-                    <li>Position : {Positions[3].Position}</li>
-                    <li>Infos : {Positions[3].Infos}</li>
-                    <li>Players : {Positions[3].Players}</li>
+                    <li>POSITION : {Positions[3].Position}</li>
+                    <li>INFO : {Positions[3].Infos}</li>
+                    <li>PLAYER : {Positions[3].Players}</li>
                   </ul>
                 </div>
               </div>
@@ -86,9 +86,9 @@ export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
 
                 <div id="infoPointGuard" className="infoPosition">
                   <ul>
-                    <li>Position : {Positions[1].Position}</li>
-                    <li>Infos : {Positions[1].Infos}</li>
-                    <li>Players : {Positions[1].Players}</li>
+                    <li>POSITION : {Positions[1].Position}</li>
+                    <li>INFO : {Positions[1].Infos}</li>
+                    <li>PLAYER : {Positions[1].Players}</li>
                   </ul>
                 </div>
               </div>
@@ -103,9 +103,9 @@ export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
                 />
                 <div id="infoShootingGuard" className="infoPosition">
                   <ul>
-                    <li>Position : {Positions[2].Position}</li>
-                    <li>Infos : {Positions[2].Infos}</li>
-                    <li>Players : {Positions[2].Players}</li>
+                    <li>POSITION : {Positions[2].Position}</li>
+                    <li>INFO : {Positions[2].Infos}</li>
+                    <li>PLAYER : {Positions[2].Players}</li>
                   </ul>
                 </div>
               </div>
