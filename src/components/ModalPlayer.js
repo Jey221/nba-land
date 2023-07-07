@@ -9,7 +9,7 @@ import Positions from '../data/Positons';
 
 export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
   const [isHidden, setIsHidden] = useState(true);
-  console.log(Positions[0].Position);
+
   // liaison entre le logo et l'équipe
   const Parquets = () => {
     const handlePark = () => {

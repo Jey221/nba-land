@@ -1,7 +1,18 @@
+import { useEffect, useState } from 'react';
 import Header from '../components/Header/Header';
 import { motion } from 'framer-motion';
+import { getDataGames } from '../data/datas';
 
 export default function Games() {
+  const [dataGames, setDataGames] = useState();
+  useEffect(() => {
+    async function teamLoad() {
+      const datas = await getDataGames();
+      setDataGames(datas);
+    }
+    teamLoad();
+  }, []);
+  console.log(dataGames);
   return (
     <div>
       <Header />

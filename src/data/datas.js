@@ -11,7 +11,6 @@ export const getDataTeams = async () => {
       'X-RapidAPI-Host': 'free-nba.p.rapidapi.com',
     },
   };
-
   try {
     const response = await axios.request(options);
     return response.data.data;
@@ -35,10 +34,63 @@ export const getDataPlayers = async (page, searchPlayer) => {
       'X-RapidAPI-Host': 'free-nba.p.rapidapi.com',
     },
   };
-
   try {
     const response = await axios.request(options);
     return response.data.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// Call API axios pour les données des match
+export const getDataGames = async () => {
+  // param>>> page, date, season ***page.toString()***date.toString()***season.toString()
+  const options = {
+    method: 'GET',
+    url: 'https://free-nba.p.rapidapi.com/games',
+    params: {
+      page: '9',
+      per_page: '25',
+      team_ids: '',
+      date: '',
+      Seasons: '',
+
+      /* 
+      page: page.toString(),
+      team_ids: '1',
+      date: date.toString(),
+      Seasons: season.toString(), */
+    },
+    headers: {
+      'X-RapidAPI-Key': '3339d009a1mshbf92b48a34c61d6p17be4djsnb7ebebd1f53f',
+      'X-RapidAPI-Host': 'free-nba.p.rapidapi.com',
+    },
+  };
+  try {
+    const response = await axios.request(options);
+    console.log(response.data);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// Call API axios pour les données des stats
+export const getDataStat = async (page) => {
+  const options = {
+    method: 'GET',
+    url: 'https://free-nba.p.rapidapi.com/stats',
+    params: {
+      page: page.toString(),
+      per_page: '25',
+    },
+    headers: {
+      'X-RapidAPI-Key': '3339d009a1mshbf92b48a34c61d6p17be4djsnb7ebebd1f53f',
+      'X-RapidAPI-Host': 'free-nba.p.rapidapi.com',
+    },
+  };
+  try {
+    const response = await axios.request(options);
+    console.log(response.data);
   } catch (error) {
     console.error(error);
   }

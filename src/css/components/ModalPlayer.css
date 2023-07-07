@@ -72,7 +72,8 @@
 #closeBtnPark {
   position: absolute;
   top: 7px;
-  right: 0;
+  right: -7px;
+  font-size: 27px;
 }
 .ligneAvant,
 .ligneArriere {
