@@ -52,6 +52,16 @@
 .logoZone img {
   width: 225px;
 }
+.infos {
+  background-size: cover;
+  background-position: center center;
+  width: 54%;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
 
 .infos ul {
   list-style: none;
@@ -66,4 +76,16 @@
 }
 .infos ul li {
   color: black;
+}
+
+@media only screen and (max-width: 425px) {
+  .modalContent {
+    width: 93%;
+  }
+  .logoZone img {
+    width: 110px;
+  }
+  .infos {
+    height: 180px;
+  }
 }

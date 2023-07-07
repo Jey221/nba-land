@@ -107,3 +107,16 @@
   list-style: none;
   font-size: small;
 }
+
+@media only screen and (max-width: 425px) {
+  .modalContentPlayer {
+    width: 93%;
+  }
+  .infoPosition {
+    top: 207px;
+    left: -33px;
+  }
+  .infoPosition ul {
+    padding: 0;
+  }
+}

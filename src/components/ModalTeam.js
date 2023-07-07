@@ -11,14 +11,6 @@ export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
   // mise en forme de l'image de l'arène
   const arenaStyle = {
     backgroundImage: `url(${arena})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
-    width: '54%',
-    height: '260px',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'baseline',
   };
 
   return (
