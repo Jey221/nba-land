@@ -1,10 +1,12 @@
 import Header from '../components/Header/Header';
 import { motion } from 'framer-motion';
 import GalleryPlayers from '../components/GalleryPlayers';
+import Loading from '../components/Loading';
 
 export default function Players() {
   return (
     <div>
+      <Loading />
       <Header />
       <motion.div
         initial={{ y: 25, opacity: 0 }}

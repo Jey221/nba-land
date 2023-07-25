@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Header from '../components/Header/Header';
 import { motion } from 'framer-motion';
 import { getDetail } from '../data/datas';
+import Loading from '../components/Loading';
 
 export default function Games() {
   const [dataGames, setDataGames] = useState();
@@ -15,6 +16,7 @@ export default function Games() {
   console.log(dataGames);
   return (
     <div>
+      <Loading />
       <Header />
       <motion.div
         initial={{ y: 25, opacity: 0 }}

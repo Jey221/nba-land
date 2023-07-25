@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import Header from '../components/Header/Header';
 import CardsMenu from '../components/CardsMenu';
+import Loading from '../components/Loading';
 
 export default function Menu() {
   return (
     <div>
+      <Loading />
       <Header />
       <motion.div
         initial={{ y: 25, opacity: 0 }}

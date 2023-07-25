@@ -14,7 +14,7 @@ export default function Details() {
     detailLoad();
   }, []);
 
-  console.log(dataDetailTeam.team.franchise);
+  console.log(dataDetailTeam);
 
   return (
     <div>

@@ -1,9 +1,11 @@
 import Header from '../components/Header/Header';
 import { motion } from 'framer-motion';
+import Loading from '../components/Loading';
 
 export default function States() {
   return (
     <div>
+      <Loading />
       <Header />
       <motion.div
         initial={{ y: 25, opacity: 0 }}
