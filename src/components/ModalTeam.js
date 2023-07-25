@@ -2,6 +2,7 @@ import '../css/components/ModalTeam.css';
 import * as AiIcons from 'react-icons/ai';
 import LOGOS from '../data/LogosTeams';
 import ARENA from '../data/Arena';
+import { Link } from 'react-router-dom';
 
 export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
   // liaison entre les logos et les équipes
@@ -23,15 +24,17 @@ export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
           </div>
         </header>
         <div className="modalBody">
-          <div className="logoZone">
-            <img
-              src={logo}
-              alt={selectedTeam.abbreviation}
-              className="logoTeam"
-              id={selectedTeam.abbreviation}
-            />
-            <h2>{selectedTeam.name}</h2>
-          </div>
+          <Link to={'/teams/details'}>
+            <div className="logoZone">
+              <img
+                src={logo}
+                alt={selectedTeam.abbreviation}
+                className="logoTeam"
+                id={selectedTeam.abbreviation}
+              />
+              <h2>{selectedTeam.name}</h2>
+            </div>
+          </Link>
           <div className="infos" style={arenaStyle}>
             <ul>
               <li>City : {selectedTeam.city}</li>

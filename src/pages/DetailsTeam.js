@@ -3,16 +3,19 @@ import Header from '../components/Header/Header';
 import { motion } from 'framer-motion';
 import { getDetail } from '../data/datas';
 
-export default function Games() {
-  const [dataGames, setDataGames] = useState();
+export default function Details() {
+  const [dataDetailTeam, setDataDetailTeam] = useState();
+
   useEffect(() => {
-    async function teamLoad() {
+    async function detailLoad() {
       const datas = await getDetail();
-      setDataGames(datas);
+      setDataDetailTeam(datas);
     }
-    teamLoad();
+    detailLoad();
   }, []);
-  console.log(dataGames);
+
+  console.log(dataDetailTeam.team.franchise);
+
   return (
     <div>
       <Header />
@@ -26,7 +29,7 @@ export default function Games() {
       >
         <div initial="hidden" animate="show">
           <div>
-            <div>Games</div>
+            <div>Détail team</div>
           </div>
         </div>
       </motion.div>

@@ -42,7 +42,37 @@ export const getDataPlayers = async (page, searchPlayer) => {
   }
 };
 
-// Call API axios pour les données des match
+// Call API axios pour les données des match https://www.balldontlie.io/api/v1/games
+
+export const getDetail = async () => {
+  // param>>> page, date, season ***page.toString()***date.toString()***season.toString()
+  const options = {
+    method: 'GET',
+    url: `http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/bos`, // http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/${team}
+  };
+  try {
+    const response = await axios.request(options);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+/* export const getGames = async (playerFNameSearch, playerLNameSearch) => {
+  // param>>> page, date, season ***page.toString()***date.toString()***season.toString()
+  const options = {
+    method: 'GET',
+    url: `https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${playerFNameSearch}%20${playerLNameSearch}`,
+  };
+  try {
+    const response = await axios.request(options);
+    console.log(response.data);
+  } catch (error) {
+    console.error(error);
+  }
+};*/
+
+/* // Call API axios pour les données des match https://www.balldontlie.io/api/v1/games
 export const getDataGames = async () => {
   // param>>> page, date, season ***page.toString()***date.toString()***season.toString()
   const options = {
@@ -55,11 +85,11 @@ export const getDataGames = async () => {
       date: '',
       Seasons: '',
 
-      /* 
-      page: page.toString(),
-      team_ids: '1',
-      date: date.toString(),
-      Seasons: season.toString(), */
+      
+      //page: page.toString(),
+      //team_ids: '1',
+      //date: date.toString(),
+      //Seasons: season.toString(),
     },
     headers: {
       'X-RapidAPI-Key': '3339d009a1mshbf92b48a34c61d6p17be4djsnb7ebebd1f53f',
@@ -95,3 +125,4 @@ export const getDataStat = async (page) => {
     console.error(error);
   }
 };
+ */

@@ -1,7 +1,9 @@
 .galleryMenu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: auto;
 }
 .galleryMenu a {
   text-decoration: none;
