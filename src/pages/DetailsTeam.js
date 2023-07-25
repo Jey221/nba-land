@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import Header from '../components/Header/Header';
 import { motion } from 'framer-motion';
 import { getDetail } from '../data/datas';
+import Footer from '../components/Footer/Footer';
+import Loading from '../components/Loading';
 
 export default function Details() {
   const [dataDetailTeam, setDataDetailTeam] = useState();
@@ -18,6 +20,7 @@ export default function Details() {
 
   return (
     <div>
+      <Loading />
       <Header />
       <motion.div
         initial={{ y: 25, opacity: 0 }}
@@ -33,6 +36,7 @@ export default function Details() {
           </div>
         </div>
       </motion.div>
+      <Footer />
     </div>
   );
 }

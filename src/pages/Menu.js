@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Header from '../components/Header/Header';
 import CardsMenu from '../components/CardsMenu';
 import Loading from '../components/Loading';
+import Footer from '../components/Footer/Footer';
 
 export default function Menu() {
   return (
@@ -25,6 +26,7 @@ export default function Menu() {
           </div>
         </div>
       </motion.div>
+      <Footer />
     </div>
   );
 }

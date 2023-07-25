@@ -3,6 +3,7 @@ import Header from '../components/Header/Header';
 import { motion } from 'framer-motion';
 import { getDetail } from '../data/datas';
 import Loading from '../components/Loading';
+import Footer from '../components/Footer/Footer';
 
 export default function Games() {
   const [dataGames, setDataGames] = useState();
@@ -32,6 +33,7 @@ export default function Games() {
           </div>
         </div>
       </motion.div>
+      <Footer />
     </div>
   );
 }

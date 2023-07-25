@@ -2,6 +2,7 @@ import Header from '../components/Header/Header';
 import { motion } from 'framer-motion';
 import GalleryPlayers from '../components/GalleryPlayers';
 import Loading from '../components/Loading';
+import Footer from '../components/Footer/Footer';
 
 export default function Players() {
   return (
@@ -22,6 +23,7 @@ export default function Players() {
           </div>
         </div>
       </motion.div>
+      <Footer />
     </div>
   );
 }

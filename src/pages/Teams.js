@@ -1,6 +1,7 @@
 import Header from '../components/Header/Header';
 import GalleryTeams from '../components/GalleryTeams';
 import Loading from '../components/Loading';
+import Footer from '../components/Footer/Footer';
 
 export default function Teams() {
   return (
@@ -13,6 +14,7 @@ export default function Teams() {
           <GalleryTeams />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

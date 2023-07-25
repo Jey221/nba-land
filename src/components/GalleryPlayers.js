@@ -73,7 +73,6 @@ export default function GalleryPlayers() {
               initial={{ x: 25, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{
-                delay: 5,
                 duration: 1,
               }}
               className="player"
