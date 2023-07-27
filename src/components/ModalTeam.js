@@ -13,7 +13,7 @@ export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
   const arenaStyle = {
     backgroundImage: `url(${arena})`,
   };
-
+  console.log(selectedTeam);
   return (
     <div className="modalBackground" onClick={setIsOpenModal.bind(this, false)}>
       <div className="modalContent" onClick={(e) => e.stopPropagation()}>
@@ -24,7 +24,7 @@ export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
           </div>
         </header>
         <div className="modalBody">
-          <Link to={'/teams/details'}>
+          <Link to={`/teams/details/${selectedTeam.name}`}>
             <div className="logoZone">
               <img
                 src={logo}

@@ -1,13 +1,33 @@
+import '../css/pages/detailTeam.css';
 import { useEffect, useState } from 'react';
 import Header from '../components/Header/Header';
-import { motion } from 'framer-motion';
 import { getDetail } from '../data/datas';
 import Footer from '../components/Footer/Footer';
 import Loading from '../components/Loading';
+import { useParams } from 'react-router';
+//import { motion } from 'framer-motion';
 
 export default function Details() {
-  const [dataDetailTeam, setDataDetailTeam] = useState();
+  const [dataDetailTeam, setDataDetailTeam] = useState([]);
+  const [currentTeam, setCurrentTeam] = useState();
+  const id = useParams();
 
+  /*   useEffect(() => {
+    async function detailLoad() {
+      const datas = await getDetail();
+      setDataDetailTeam(datas);
+      const teamPage = dataDetailTeam.find(
+        (team) => team.team.name === id.idTeams
+      );
+      setCurrentTeam(teamPage.team);
+    }
+    detailLoad();
+  }, []);
+ */
+  // SELECTION TEAM PAGE
+  //console.log('teamPage', teamPage);
+  //console.log('team info', teamPage.team.links);
+  //
   useEffect(() => {
     async function detailLoad() {
       const datas = await getDetail();
@@ -16,26 +36,40 @@ export default function Details() {
     detailLoad();
   }, []);
 
-  console.log(dataDetailTeam);
+  useEffect(() => {
+    const teamPage = dataDetailTeam.find(
+      (team) => team.team.name === id.idTeams
+    );
+    if (teamPage) {
+      setCurrentTeam(teamPage.team);
+    }
+  }, [dataDetailTeam, id.idTeams]);
 
+  console.log(currentTeam);
   return (
     <div>
       <Loading />
       <Header />
-      <motion.div
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          duration: 0.75,
-        }}
-        className=""
-      >
-        <div initial="hidden" animate="show">
-          <div>
-            <div>Détail team</div>
-          </div>
+      <div initial="hidden" animate="show">
+        <div>
+          {currentTeam ? (
+            <div
+              className="zoneDetail"
+              style={{ backgroundColor: `#${currentTeam.color}` }}
+            >
+              <div>{currentTeam.displayName}</div>
+              <div>{currentTeam.abbreviation}</div>
+              <div>{currentTeam.location}</div>
+              <div>{currentTeam.name}</div>
+              <div>{currentTeam.nickname}</div>
+              <div>{currentTeam.shortDisplayName}</div>
+              <div>{currentTeam.slug}</div>
+            </div>
+          ) : (
+            <div>Loading...</div>
+          )}
         </div>
-      </motion.div>
+      </div>
       <Footer />
     </div>
   );

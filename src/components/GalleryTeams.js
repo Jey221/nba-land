@@ -20,7 +20,7 @@ export default function GalleryTeams() {
     }
     teamLoad();
   }, []);
-
+  console.log(datasTeam);
   // click sur carte des équipes
   const handleClick = (e, team) => {
     setIsOpenModal(true);

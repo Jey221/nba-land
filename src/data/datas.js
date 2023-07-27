@@ -48,11 +48,12 @@ export const getDetail = async () => {
   // param>>> page, date, season ***page.toString()***date.toString()***season.toString()
   const options = {
     method: 'GET',
-    url: `http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/bos`, // http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/${team}
+    url: `http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams`, // http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/${team}
   };
   try {
     const response = await axios.request(options);
-    return response.data;
+    // console.log(response.data.sports[0].leagues[0].teams);
+    return response.data.sports[0].leagues[0].teams;
   } catch (error) {
     console.error(error);
   }
