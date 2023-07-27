@@ -5,29 +5,12 @@ import { getDetail } from '../data/datas';
 import Footer from '../components/Footer/Footer';
 import Loading from '../components/Loading';
 import { useParams } from 'react-router';
-//import { motion } from 'framer-motion';
 
 export default function Details() {
   const [dataDetailTeam, setDataDetailTeam] = useState([]);
   const [currentTeam, setCurrentTeam] = useState();
   const id = useParams();
 
-  /*   useEffect(() => {
-    async function detailLoad() {
-      const datas = await getDetail();
-      setDataDetailTeam(datas);
-      const teamPage = dataDetailTeam.find(
-        (team) => team.team.name === id.idTeams
-      );
-      setCurrentTeam(teamPage.team);
-    }
-    detailLoad();
-  }, []);
- */
-  // SELECTION TEAM PAGE
-  //console.log('teamPage', teamPage);
-  //console.log('team info', teamPage.team.links);
-  //
   useEffect(() => {
     async function detailLoad() {
       const datas = await getDetail();

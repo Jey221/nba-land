@@ -13,7 +13,7 @@ export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
   const arenaStyle = {
     backgroundImage: `url(${arena})`,
   };
-  console.log(selectedTeam);
+
   return (
     <div className="modalBackground" onClick={setIsOpenModal.bind(this, false)}>
       <div className="modalContent" onClick={(e) => e.stopPropagation()}>
@@ -48,7 +48,3 @@ export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
     </div>
   );
 }
-
-/* 
-<AiOutlineCloseCircle/>
-*/
