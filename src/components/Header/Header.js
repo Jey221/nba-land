@@ -3,6 +3,8 @@ import logoNba from '../../assets/logos/SVG-nba.svg';
 import { Link } from 'react-router-dom';
 import NavbarHeader from './Navbar';
 
+/* MISE EN PLACE DU FOOTER */
+
 export default function Header() {
   return (
     <header className="Header">

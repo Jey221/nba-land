@@ -1,3 +1,34 @@
 .zoneDetail {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+}
+.zone1 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1%;
+  justify-content: space-around;
+}
+.leftZone {
+  width: 40%;
+}
+.logoTeamDetail {
+  width: 100%;
+}
+.zone2 {
+  display: flex;
+  flex-direction: row;
+}
+.parquet {
+  background-position: center;
+  background-size: cover;
+  width: 375px;
+  height: 200px;
+}
+.arena {
+  background-position: center;
+  background-size: cover;
+  width: 375px;
+  height: 200px;
 }

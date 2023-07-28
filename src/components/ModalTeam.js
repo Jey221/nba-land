@@ -24,7 +24,7 @@ export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
           </div>
         </header>
         <div className="modalBody">
-          <Link to={`/teams/details/${selectedTeam.name}`}>
+          <Link to={`/teams/details/${selectedTeam.abbreviation}`}>
             <div className="logoZone">
               <img
                 src={logo}

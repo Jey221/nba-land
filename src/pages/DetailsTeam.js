@@ -5,30 +5,36 @@ import { getDetail } from '../data/datas';
 import Footer from '../components/Footer/Footer';
 import Loading from '../components/Loading';
 import { useParams } from 'react-router';
+import PARQUETS from '../data/Parquets';
+import LOGOS from '../data/LogosTeams';
+import ARENA from '../data/Arena';
+import * as BsIcons from 'react-icons/bs';
+import * as BiIcons from 'react-icons/bi';
 
 export default function Details() {
-  const [dataDetailTeam, setDataDetailTeam] = useState([]);
-  const [currentTeam, setCurrentTeam] = useState();
-  const id = useParams();
+  const [dataDetailTeam, setDataDetailTeam] = useState([]); // hook pour récupération des données des équipes
+  const [currentTeam, setCurrentTeam] = useState(); // hook pour récupération des données de l'équipe sélectionnée
+  const id = useParams(); // localisation de l'équipe sélectionnée grâce a l'url
 
+  // Chargement des données des équipes
   useEffect(() => {
     async function detailLoad() {
-      const datas = await getDetail();
+      const datas = await getDetail(id.idTeams);
       setDataDetailTeam(datas);
     }
     detailLoad();
-  }, []);
+  }, [id.idTeams]);
 
+  console.log('dataDetailTeam2', dataDetailTeam);
+
+  // Mise en place d'un hook pour récupérer l'équipe après chargement des données
   useEffect(() => {
-    const teamPage = dataDetailTeam.find(
-      (team) => team.team.name === id.idTeams
-    );
-    if (teamPage) {
-      setCurrentTeam(teamPage.team);
+    if (dataDetailTeam.team) {
+      setCurrentTeam(dataDetailTeam.team);
     }
-  }, [dataDetailTeam, id.idTeams]);
+  }, [dataDetailTeam]);
 
-  console.log(currentTeam);
+  console.log('currentTeam', currentTeam);
   return (
     <div>
       <Loading />
@@ -40,13 +46,75 @@ export default function Details() {
               className="zoneDetail"
               style={{ backgroundColor: `#${currentTeam.color}` }}
             >
-              <div>{currentTeam.displayName}</div>
-              <div>{currentTeam.abbreviation}</div>
-              <div>{currentTeam.location}</div>
-              <div>{currentTeam.name}</div>
-              <div>{currentTeam.nickname}</div>
-              <div>{currentTeam.shortDisplayName}</div>
-              <div>{currentTeam.slug}</div>
+              <div className="zone1">
+                <div className="leftZone">
+                  <div className="logo">
+                    <img
+                      src={LOGOS[currentTeam.abbreviation]}
+                      alt={currentTeam.abbreviation}
+                      className="logoTeamDetail"
+                      id={currentTeam.abbreviation}
+                    />
+                  </div>
+                </div>
+                <div className="rightZone">
+                  <div className="fullName">
+                    <h1>{currentTeam.displayName},</h1>
+                  </div>
+                  <div className="info">
+                    <p>
+                      {currentTeam.location}, {currentTeam.abbreviation}
+                    </p>
+                    <p>{currentTeam.standingSummary}</p>
+                    <p>roaster team</p>
+                    {currentTeam.record.items.map((item) => {
+                      console.log('item', item);
+
+                      return (
+                        <>
+                          <p>{item.description}</p>
+                          {item.stats.map((stat) => {
+                            console.log('stat', stat);
+                            return (
+                              <ul>
+                                <li>
+                                  {stat.name} : {stat.value}
+                                </li>
+                              </ul>
+                            );
+                          })}
+                        </>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+              <h2>{currentTeam.franchise.venue.fullName}</h2>
+              <h4>
+                <BiIcons.BiCurrentLocation />
+                {currentTeam.franchise.venue.address.city},{' '}
+                {currentTeam.franchise.venue.address.state}
+              </h4>
+              <p>
+                <BsIcons.BsFillPersonFill />{' '}
+                {currentTeam.franchise.venue.capacity}
+              </p>
+              <div className="zone2">
+                <div
+                  className="parquet"
+                  style={{
+                    backgroundImage: `url(${
+                      PARQUETS[currentTeam.abbreviation]
+                    })`,
+                  }}
+                ></div>
+                <div
+                  className="arena"
+                  style={{
+                    backgroundImage: `url(${ARENA[currentTeam.abbreviation]})`,
+                  }}
+                ></div>
+              </div>
             </div>
           ) : (
             <div>Loading...</div>

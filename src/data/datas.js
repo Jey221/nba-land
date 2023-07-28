@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// Call API axios pour les données des équipes
+// Call API axios pour les données des équipes (via rapidApi)
 export const getDataTeams = async () => {
   const options = {
     method: 'GET',
@@ -19,7 +19,7 @@ export const getDataTeams = async () => {
   }
 };
 
-// Call API axios pour les données des joueurs
+// Call API axios pour les données des joueurs (via rapidApi)
 export const getDataPlayers = async (page, searchPlayer) => {
   const options = {
     method: 'GET',
@@ -42,9 +42,24 @@ export const getDataPlayers = async (page, searchPlayer) => {
   }
 };
 
+// Call API axios pour les données détaillés des équipes (via ESPN)
+export const getDetail = async (team) => {
+  const options = {
+    method: 'GET',
+    url: `http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/${team}`, // http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/${team}
+  };
+  try {
+    const response = await axios.request(options);
+    // console.log(response.data.sports[0].leagues[0].teams);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 // Call API axios pour les données des match https://www.balldontlie.io/api/v1/games
 
-export const getDetail = async () => {
+/* export const getDetail = async () => {
   // param>>> page, date, season ***page.toString()***date.toString()***season.toString()
   const options = {
     method: 'GET',
@@ -58,6 +73,7 @@ export const getDetail = async () => {
     console.error(error);
   }
 };
+ */
 
 /* export const getGames = async (playerFNameSearch, playerLNameSearch) => {
   // param>>> page, date, season ***page.toString()***date.toString()***season.toString()
