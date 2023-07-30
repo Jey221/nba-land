@@ -10,6 +10,7 @@ import LOGOS from '../data/LogosTeams';
 import ARENA from '../data/Arena';
 import * as BsIcons from 'react-icons/bs';
 import * as BiIcons from 'react-icons/bi';
+import ScrollBar from '../components/ScrollBar';
 
 export default function Details() {
   const [dataDetailTeam, setDataDetailTeam] = useState([]); // hook pour récupération des données des équipes
@@ -25,8 +26,6 @@ export default function Details() {
     detailLoad();
   }, [id.idTeams]);
 
-  console.log('dataDetailTeam2', dataDetailTeam);
-
   // Mise en place d'un hook pour récupérer l'équipe après chargement des données
   useEffect(() => {
     if (dataDetailTeam.team) {
@@ -34,7 +33,8 @@ export default function Details() {
     }
   }, [dataDetailTeam]);
 
-  console.log('currentTeam', currentTeam);
+  //console.log('currentTeam', currentTeam);
+
   return (
     <div>
       <Loading />
@@ -42,80 +42,94 @@ export default function Details() {
       <div initial="hidden" animate="show">
         <div>
           {currentTeam ? (
-            <div
-              className="zoneDetail"
-              style={{ backgroundColor: `#${currentTeam.color}` }}
-            >
-              <div className="zone1">
-                <div className="leftZone">
-                  <div className="logo">
-                    <img
-                      src={LOGOS[currentTeam.abbreviation]}
-                      alt={currentTeam.abbreviation}
-                      className="logoTeamDetail"
-                      id={currentTeam.abbreviation}
-                    />
+            <>
+              <ScrollBar />
+              <div
+                className="zoneDetail"
+                style={{ backgroundColor: `#${currentTeam.color}CC` }}
+              >
+                <div className="zone1">
+                  <div className="leftZone">
+                    <div className="logo">
+                      <img
+                        src={LOGOS[currentTeam.abbreviation]}
+                        alt={currentTeam.abbreviation}
+                        className="logoTeamDetail"
+                        id={currentTeam.abbreviation}
+                      />
+                    </div>
+                  </div>
+                  <div className="rightZone">
+                    <div className="fullName">
+                      <h1>{currentTeam.displayName},</h1>
+                    </div>
+                    <div className="info">
+                      <p>
+                        {currentTeam.location}, {currentTeam.abbreviation}
+                      </p>
+                      <p>{currentTeam.standingSummary}</p>
+                      <p>roaster team</p>
+                    </div>
                   </div>
                 </div>
-                <div className="rightZone">
-                  <div className="fullName">
-                    <h1>{currentTeam.displayName},</h1>
-                  </div>
-                  <div className="info">
-                    <p>
-                      {currentTeam.location}, {currentTeam.abbreviation}
-                    </p>
-                    <p>{currentTeam.standingSummary}</p>
-                    <p>roaster team</p>
-                    {currentTeam.record.items.map((item) => {
-                      console.log('item', item);
-
-                      return (
-                        <>
-                          <p>{item.description}</p>
-                          {item.stats.map((stat) => {
-                            console.log('stat', stat);
-                            return (
-                              <ul>
-                                <li>
-                                  {stat.name} : {stat.value}
-                                </li>
-                              </ul>
-                            );
-                          })}
-                        </>
-                      );
-                    })}
-                  </div>
+                <h2>{currentTeam.displayName} statistics</h2>
+                <div className="zone2">
+                  {currentTeam.record.items.map((item) => {
+                    //console.log('item', item);
+                    return (
+                      <div
+                        className="statList"
+                        id={item.description}
+                        key={currentTeam.id}
+                      >
+                        <p>{item.description}</p>
+                        {item.stats.map((stat) => {
+                          //console.log('stat', stat);
+                          return (
+                            <ul key={stat.name}>
+                              <li>
+                                <BiIcons.BiBasketball
+                                  style={{ marginRight: '3%' }}
+                                />
+                                {stat.name} : {stat.value}
+                              </li>
+                            </ul>
+                          );
+                        })}
+                      </div>
+                    );
+                  })}
+                </div>
+                <h2>{currentTeam.franchise.venue.fullName}</h2>
+                <h4>
+                  <BiIcons.BiCurrentLocation />
+                  {currentTeam.franchise.venue.address.city},{' '}
+                  {currentTeam.franchise.venue.address.state}
+                </h4>
+                <p>
+                  <BsIcons.BsFillPersonFill />{' '}
+                  {currentTeam.franchise.venue.capacity}
+                </p>
+                <div className="zone3">
+                  <div
+                    className="parquet"
+                    style={{
+                      backgroundImage: `url(${
+                        PARQUETS[currentTeam.abbreviation]
+                      })`,
+                    }}
+                  ></div>
+                  <div
+                    className="arena"
+                    style={{
+                      backgroundImage: `url(${
+                        ARENA[currentTeam.abbreviation]
+                      })`,
+                    }}
+                  ></div>
                 </div>
               </div>
-              <h2>{currentTeam.franchise.venue.fullName}</h2>
-              <h4>
-                <BiIcons.BiCurrentLocation />
-                {currentTeam.franchise.venue.address.city},{' '}
-                {currentTeam.franchise.venue.address.state}
-              </h4>
-              <p>
-                <BsIcons.BsFillPersonFill />{' '}
-                {currentTeam.franchise.venue.capacity}
-              </p>
-              <div className="zone2">
-                <div
-                  className="parquet"
-                  style={{
-                    backgroundImage: `url(${
-                      PARQUETS[currentTeam.abbreviation]
-                    })`,
-                  }}
-                ></div>
-                <div
-                  className="arena"
-                  style={{
-                    backgroundImage: `url(${ARENA[currentTeam.abbreviation]})`,
-                  }}
-                ></div>
-              </div>
-            </div>
+            </>
           ) : (
             <div>Loading...</div>
           )}

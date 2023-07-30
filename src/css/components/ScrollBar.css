@@ -1,0 +1,28 @@
+.scrollBarZone {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.scrollbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 0;
+  opacity: 0;
+  background: linear-gradient(to top, #002fff, #1180ffc0);
+  border-radius: 0 0 5px 5px;
+}
+.clickScrollbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 100%;
+  background: rgba(170, 170, 170, 0.11);
+  border-radius: 0 0 5px 5px;
+}

@@ -3,12 +3,14 @@ import Header from '../components/Header/Header';
 import CardsMenu from '../components/CardsMenu';
 import Loading from '../components/Loading';
 import Footer from '../components/Footer/Footer';
+import ScrollBar from '../components/ScrollBar';
 
 export default function Menu() {
   return (
     <div>
       <Loading />
       <Header />
+      <ScrollBar />
       <motion.div
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

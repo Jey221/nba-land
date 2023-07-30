@@ -6,6 +6,7 @@ import '../css/components/GalleryPlayers.css';
 import * as GiIcons from 'react-icons/gi';
 import * as AiIcons from 'react-icons/ai';
 import ModalPlayer from './ModalPlayer';
+import ScrollBar from './ScrollBar';
 
 export default function GalleryPlayers() {
   // mise en place des hooks
@@ -67,6 +68,7 @@ export default function GalleryPlayers() {
         />
       </div>
       <div className="GalleryPlayers">
+        <ScrollBar />
         {dataPlayer.map((player) => {
           return (
             <motion.div
