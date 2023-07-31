@@ -16,6 +16,20 @@
 .logoTeamDetail {
   width: 100%;
 }
+.colorsTeam {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.color {
+  width: 7vw;
+  height: 6vh;
+  border: 1px solid wheat;
+  box-shadow: 10px 5px 5px black;
+  border-radius: 5px;
+}
 .zone2 {
   display: flex;
   align-items: flex-start;
@@ -26,6 +40,12 @@
 }
 .statList li {
   list-style: none;
+}
+.statList ul {
+  padding-left: 0%;
+}
+.statList li {
+  margin-bottom: 2vh;
 }
 
 .zone3 {

@@ -9,6 +9,7 @@ import Teams from './pages/Teams';
 import Players from './pages/Players';
 import States from './pages/States';
 import Details from './pages/DetailsTeam';
+import Error from './pages/Error';
 
 function App() {
   return (
@@ -40,11 +41,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/teams" element={<Teams />} />
-            <Route path="/teams/details/:idTeams" element={<Details />} />
+            <Route exact path="/teams/details/:idTeams" element={<Details />} />
             <Route path="/players" element={<Players />} />
             <Route path="/games" element={<Games />} />
             <Route path="/states" element={<States />} />
-            <Route path="/erreur" element={''} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </div>
       </motion.div>

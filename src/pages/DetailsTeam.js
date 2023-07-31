@@ -10,6 +10,7 @@ import LOGOS from '../data/LogosTeams';
 import ARENA from '../data/Arena';
 import * as BsIcons from 'react-icons/bs';
 import * as BiIcons from 'react-icons/bi';
+import * as FaIcons from 'react-icons/fa';
 import ScrollBar from '../components/ScrollBar';
 
 export default function Details() {
@@ -33,7 +34,8 @@ export default function Details() {
     }
   }, [dataDetailTeam]);
 
-  //console.log('currentTeam', currentTeam);
+  console.log('currentTeam', currentTeam);
+  console.log('logo', currentTeam);
 
   return (
     <div>
@@ -68,34 +70,65 @@ export default function Details() {
                         {currentTeam.location}, {currentTeam.abbreviation}
                       </p>
                       <p>{currentTeam.standingSummary}</p>
-                      <p>roaster team</p>
+                      <p>
+                        Ranking {currentTeam.nextEvent[0].season.displayName} :{' '}
+                        {currentTeam.nextEvent[0].seasonType.type}
+                      </p>
+                      <div className="colorsTeam">
+                        <div
+                          className="color colorTeam1"
+                          style={{ backgroundColor: `#${currentTeam.color}` }}
+                        ></div>
+                        <div
+                          className="color colorTeam2"
+                          style={{
+                            backgroundColor: `#${currentTeam.alternateColor}`,
+                          }}
+                        ></div>
+                      </div>
+                      <img
+                        src={currentTeam.logos[0].href}
+                        alt={currentTeam.abbreviation}
+                        className="logoTeamExpl"
+                        style={{ width: '35vh' }}
+                      />
                     </div>
                   </div>
                 </div>
                 <h2>{currentTeam.displayName} statistics</h2>
                 <div className="zone2">
-                  {currentTeam.record.items.map((item) => {
+                  {currentTeam.record.items.map((item, index) => {
                     //console.log('item', item);
+                    let icon;
+                    if (item.description === 'Overall Record') {
+                      icon = <BiIcons.BiStats />;
+                    } else if (item.description === 'Home Record') {
+                      icon = <BiIcons.BiHome />;
+                    } else if (item.description === 'Away Record') {
+                      icon = <FaIcons.FaPlane />;
+                    }
                     return (
                       <div
                         className="statList"
                         id={item.description}
-                        key={currentTeam.id}
+                        key={index}
                       >
+                        {icon}
                         <p>{item.description}</p>
-                        {item.stats.map((stat) => {
-                          //console.log('stat', stat);
-                          return (
-                            <ul key={stat.name}>
-                              <li>
+                        <ul>
+                          {item.stats.map((stat, index) => {
+                            //console.log('stat', stat);
+                            const uniqueKey = `${stat.name}-${stat.value}-${index}`;
+                            return (
+                              <li key={uniqueKey}>
                                 <BiIcons.BiBasketball
                                   style={{ marginRight: '3%' }}
                                 />
                                 {stat.name} : {stat.value}
                               </li>
-                            </ul>
-                          );
-                        })}
+                            );
+                          })}
+                        </ul>
                       </div>
                     );
                   })}

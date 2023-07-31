@@ -1,0 +1,29 @@
+.errorContain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imageError {
+  background-image: url(../../assets/images/error2.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 19px 5px 20px #ffffff7a;
+  margin-bottom: 4vh;
+  border: 7px solid red;
+}
+.error404 {
+  font-size: 30vw;
+  color: red;
+  font-weight: 700;
+}
+.btnBack {
+  background-color: red;
+  padding: 0% 9%;
+  border-radius: 8px;
+}

@@ -46,6 +46,9 @@
   justify-content: space-around;
   gap: 2em;
 }
+.modalBody a {
+  text-decoration: none;
+}
 .logoZone {
   margin-top: 0%;
 }
