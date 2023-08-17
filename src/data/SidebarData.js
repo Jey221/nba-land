@@ -27,8 +27,8 @@ export const SidebarData = [
     cName: 'nav-text',
   },
   {
-    title: 'States',
-    path: '/states',
+    title: 'Ranking',
+    path: '/ranking',
     icon: <RiIcons.RiNumbersLine />,
     cName: 'nav-text',
   },

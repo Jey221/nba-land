@@ -9,9 +9,14 @@
   flex-direction: row;
   margin-bottom: 1%;
   justify-content: space-around;
+  width: 70%;
 }
 .leftZone {
   width: 40%;
+}
+.logo {
+  background-color: #ffffff24;
+  border-radius: 20px;
 }
 .logoTeamDetail {
   width: 100%;
@@ -51,16 +56,18 @@
 .zone3 {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
 }
 .parquet {
   background-position: center;
   background-size: cover;
-  width: 375px;
-  height: 200px;
+  width: 30vw;
+  height: 44vh;
 }
 .arena {
   background-position: center;
   background-size: cover;
-  width: 375px;
-  height: 200px;
+  width: 30vw;
+  height: 44vh;
 }

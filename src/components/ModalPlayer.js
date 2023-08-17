@@ -10,7 +10,7 @@ import Positions from '../data/Positons';
 export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
   const [isHidden, setIsHidden] = useState(true);
 
-  // liaison entre le logo et l'équipe
+  // verif sur la position du joueur
   const Parquets = () => {
     const handlePark = () => {
       setIsHidden(true);
@@ -115,6 +115,8 @@ export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
       </>
     );
   };
+
+  // liaison entre le logo et l'équipe
   const logo = LOGOS[selectedPlayer.team.abbreviation];
   return (
     <div className="modalBackground" onClick={setIsOpenModal.bind(this, false)}>
@@ -125,7 +127,9 @@ export default function ModalPlayer({ setIsOpenModal, selectedPlayer }) {
             <img src={image} alt="joueur" style={{ width: '145px' }} />
           </div>
           <div className="logoTeamPlayer">
-            <img src={logo} alt="logo" style={{ width: '100px' }} />
+            <Link to={`/teams/details/${selectedPlayer.team.abbreviation}`}>
+              <img src={logo} alt="logo" style={{ width: '100px' }} />
+            </Link>
           </div>
         </div>
         <div className="rightSection">

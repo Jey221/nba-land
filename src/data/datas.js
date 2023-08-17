@@ -50,7 +50,37 @@ export const getDetail = async (team) => {
   };
   try {
     const response = await axios.request(options);
-    // console.log(response.data.sports[0].leagues[0].teams);
+    //console.log(response.data.sports[0].leagues[0]);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// (RANKING)Call API axios pour les données détaillés des équipes pour le Ranking (via ESPN)
+export const getRanking = async () => {
+  const options = {
+    method: 'GET',
+    url: `http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams`,
+  };
+  try {
+    const response = await axios.request(options);
+    //console.log(response.data.sports[0].leagues[0]);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// (RANKING)Call API axios pour les données détaillés des équipes pour le Ranking (via ESPN)
+export const getScore = async () => {
+  const options = {
+    method: 'GET',
+    url: `http://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard`,
+  };
+  try {
+    const response = await axios.request(options);
+    //console.log(response.data.sports[0].leagues[0]);
     return response.data;
   } catch (error) {
     console.error(error);
