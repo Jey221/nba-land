@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Basketball';
+  src: local('Basketball'),
+    url(../assets/police/Basketball.otf) format('opentype');
+}
+* {
+  font-family: 'Basketball', sans-serif;
+}
 .App {
   text-align: center;
   background-image: linear-gradient(

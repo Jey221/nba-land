@@ -25,7 +25,7 @@ export default function Ranking() {
                   <th>rank</th>
                   <th>team</th>
                   <th>V-D</th>
-                  <th>%</th>
+                  <th>ratio</th>
                 </tr>
               </thead>
               <tbody>
@@ -53,7 +53,7 @@ export default function Ranking() {
                   <th>rank</th>
                   <th>team</th>
                   <th>V-D</th>
-                  <th>%</th>
+                  <th>ratio</th>
                 </tr>
               </thead>
               <tbody>
