@@ -4,12 +4,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import './css/App.css';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
-import Games from './pages/Games';
 import Teams from './pages/Teams';
 import Players from './pages/Players';
 import Details from './pages/DetailsTeam';
 import Error from './pages/Error';
 import Ranking from './pages/Ranking';
+import Trophies from './pages/Trophies';
 
 function App() {
   return (
@@ -43,7 +43,7 @@ function App() {
             <Route path="/teams" element={<Teams />} />
             <Route exact path="/teams/details/:idTeams" element={<Details />} />
             <Route path="/players" element={<Players />} />
-            <Route path="/games" element={<Games />} />
+            <Route path="/trophies" element={<Trophies />} />
             <Route path="/ranking" element={<Ranking />} />
             <Route path="*" element={<Error />} />
           </Routes>

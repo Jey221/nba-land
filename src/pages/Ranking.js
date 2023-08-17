@@ -7,23 +7,7 @@ import EastPicture from '../assets/images/east.jpg';
 import WestPicture from '../assets/images/west.jpeg';
 
 export default function Ranking() {
-  /*   const [dataTeams, setDataTeams] = useState([]);
-  const [dataScore, setDataScore] = useState([]);
-  useEffect(() => {
-    async function teamLoad() {
-      const datas = await getRanking();
-      setDataTeams(datas.sports[0].leagues[0]);
-    }
-    teamLoad();
-  }, []);
-  useEffect(() => {
-    async function teamLoad() {
-      const datas = await getScore();
-      setDataScore(datas.events[0].competitions[0].competitors);
-    }
-    teamLoad();
-  }, []);
- */ return (
+  return (
     <div>
       <Loading />
       <Header />
@@ -35,7 +19,7 @@ export default function Ranking() {
             <table>
               <thead>
                 <tr>
-                  <th colSpan="3">Ranking West</th>
+                  <th colSpan="4">Ranking West</th>
                 </tr>
                 <tr>
                   <th>rank</th>
@@ -63,7 +47,7 @@ export default function Ranking() {
             <table>
               <thead>
                 <tr>
-                  <th colSpan="3">Ranking East</th>
+                  <th colSpan="4">Ranking East</th>
                 </tr>
                 <tr>
                   <th>rank</th>

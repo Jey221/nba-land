@@ -23,8 +23,8 @@ export default function Menu() {
           <div className="galleryMenu">
             <CardsMenu title={'Teams'} path={'/teams'} />
             <CardsMenu title={'Players'} path={'/players'} />
-            <CardsMenu title={'Games'} path={'/games'} />
-            <CardsMenu title={'States'} path={'/states'} />
+            <CardsMenu title={'Trophies'} path={'/trophies'} />
+            <CardsMenu title={'Ranking'} path={'/ranking'} />
           </div>
         </div>
       </motion.div>

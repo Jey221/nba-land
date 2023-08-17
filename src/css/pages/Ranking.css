@@ -23,6 +23,7 @@
 }
 .rankingList table {
   width: 70%;
+  margin: 2%;
 }
 @media only screen and (max-width: 780px) {
   .ranking {
@@ -36,5 +37,8 @@
   }
   .rankingList img {
     width: 40vw;
+  }
+  .rankingList table {
+    width: 100%;
   }
 }

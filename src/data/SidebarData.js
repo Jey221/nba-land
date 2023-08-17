@@ -21,8 +21,8 @@ export const SidebarData = [
     cName: 'nav-text',
   },
   {
-    title: 'Games',
-    path: '/games',
+    title: 'Trophies',
+    path: '/trophies',
     icon: <RiIcons.RiBasketballLine />,
     cName: 'nav-text',
   },
