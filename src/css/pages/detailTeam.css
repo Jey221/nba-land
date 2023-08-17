@@ -43,6 +43,9 @@
   overflow: scroll;
   width: 90%;
 }
+.info img {
+  width: 10vw;
+}
 .statList li {
   list-style: none;
 }
@@ -70,4 +73,31 @@
   background-size: cover;
   width: 30vw;
   height: 44vh;
+}
+@media only screen and (max-width: 780px) {
+  .zone1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .leftZone {
+    width: 90%;
+  }
+  .info img {
+    width: 15vw;
+  }
+  .zone3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .parquet {
+    width: 85vw;
+    height: 77vh;
+    margin: 3%;
+  }
+  .arena {
+    width: 85vw;
+    height: 77vh;
+  }
 }

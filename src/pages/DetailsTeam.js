@@ -87,7 +87,6 @@ export default function Details() {
                         src={currentTeam.logos[0].href}
                         alt={currentTeam.abbreviation}
                         className="logoTeamExpl"
-                        style={{ width: '35vh' }}
                       />
                     </div>
                   </div>
