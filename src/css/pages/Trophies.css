@@ -1,0 +1,34 @@
+.winnerArticle {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  background-color: #8080805e;
+  margin: auto;
+  border-radius: 20px;
+  border: 4px outset #c08725;
+  padding: 2%;
+}
+.infoWinnerNba {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.opponentFinal {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/* GESTION IMAGES */
+#CHistory {
+  width: 45%;
+  border-radius: 15%;
+  margin: 2%;
+}
+#finals {
+  width: 80%;
+  border-radius: 12px;
+}
+.opponentLogo {
+  width: 20%;
+}
