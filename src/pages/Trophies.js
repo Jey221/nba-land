@@ -11,17 +11,19 @@ import CHistory from '../assets/images/trophies/chasingHistory.png';
 import heatLogo from '../assets/logos/SVG-heat.svg';
 import finals from '../assets/images/trophies/final.jpeg';
 import Carroussel from '../components/Carroussel';
+import ScrollBar from '../components/ScrollBar';
 
 export default function Trophies() {
   return (
     <div>
       <Loading />
       <Header />
+      <ScrollBar />
       <div>
         <div>Trophies</div>
         <h2>NBA Winner 2022/2023</h2>
         <img src={CHistory} alt="nba winners 2023" id="CHistory" />
-        <div className="winnerArticle">
+        <div className="articles">
           <Carroussel />
           <div className="infoWinnerNba">
             <img src={finals} alt="logo des finales" id="finals" />
@@ -43,6 +45,9 @@ export default function Trophies() {
           </div>
         </div>
         <h2>NBA Awards</h2>
+        <div className="articles"></div>
+        <h2>NBA All Teams</h2>
+        <div className="articles"></div>
       </div>
       <Footer />
     </div>
