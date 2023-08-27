@@ -14,26 +14,13 @@ import Carroussel from '../components/Carroussel';
 import ScrollBar from '../components/ScrollBar';
 import Awards from '../components/Awards';
 import { useEffect, useState } from 'react';
+import { AwardsDatas } from '../data/Awards';
 
 export default function Trophies() {
   const [allBlocs, setAllBlocs] = useState([]);
   useEffect(() => {
     setAllBlocs(document.querySelectorAll('.bloc'));
   }, []);
-  console.log(allBlocs);
-
-  /*   
-  useEffect(() => {
-    setAllBlocs(document.querySelectorAll('.bloc'));
-  }, []);
-  console.log(allBlocs);
-  allBlocs.forEach((bloc) => {
-    bloc.addEventListener('click', (e) => {
-      console.log(e.target);
-    });
-  });
-*/
-
   allBlocs.forEach((bloc) => {
     bloc.addEventListener('click', (e) => {
       //console.log(e.target);
@@ -46,7 +33,7 @@ export default function Trophies() {
       }
     });
   });
-
+  console.log(AwardsDatas.MVP[2]);
   return (
     <div>
       <Loading />
@@ -66,7 +53,7 @@ export default function Trophies() {
                 alt="nba winners 2023"
                 className="opponentLogo"
               />
-              <p>4-1</p>
+              <p style={{ fontSize: 'xxx-large' }}>4-1</p>
               <img
                 src={heatLogo}
                 alt="logo Miami Heat"
@@ -81,112 +68,177 @@ export default function Trophies() {
         <div className="awardsContainer">
           <div className="articles bloc active">
             <Awards
-              pictureId={'img'}
-              playerName={'JEAN MARIE'}
-              team={'bull'}
-              position={'G'}
-              pictureTeamPlayer={'img'}
-              birth={'3/16/1994 (29yrs)'}
-              award={'award'}
-              pictureContains={'img'}
-              statPTS={'20.1'}
-              statREB={'10.2'}
-              statAST={'8.2'}
-              statFG={'54.3'}
-              statRankPTS={'1'}
-              statRankREB={'2'}
-              statRankAST={'3'}
-              statRankFG={'4'}
-              stat={'20pts '}
-              hightlightLink={'jeje6 JEJE320 LODJ'}
+              pictureId={AwardsDatas.MVP.pictureID}
+              playerName={AwardsDatas.MVP.name}
+              team={AwardsDatas.MVP.team}
+              position={AwardsDatas.MVP.position}
+              pictureTeamPlayer={AwardsDatas.MVP.pictureTeamPlayer}
+              birth={AwardsDatas.MVP.birth}
+              award={AwardsDatas.MVP.award}
+              pictureContains={AwardsDatas.MVP.pictureContains}
+              statTitle1={AwardsDatas.MVP.statTitle1}
+              statPTS={AwardsDatas.MVP.statPTS}
+              statTitle2={AwardsDatas.MVP.statTitle2}
+              statREB={AwardsDatas.MVP.statREB}
+              statTitle3={AwardsDatas.MVP.statTitle3}
+              statAST={AwardsDatas.MVP.statAST}
+              statTitle4={AwardsDatas.MVP.statTitle4}
+              statFG={AwardsDatas.MVP.statFG}
+              statRankPTS={AwardsDatas.MVP.statRankPTS}
+              statRankREB={AwardsDatas.MVP.statRankREB}
+              statRankAST={AwardsDatas.MVP.statRankAST}
+              statRankFG={AwardsDatas.MVP.statRankFG}
+              hightlightLink={'piloupilou.com'}
             />
           </div>
           <div className="articles bloc">
             <Awards
-              pictureId={'img'}
-              playerName={'FRANCIS HUSTER'}
-              team={'bull'}
-              position={'G'}
-              pictureTeamPlayer={'img'}
-              birth={'3/16/1994 (29yrs)'}
-              award={'award'}
-              pictureContains={'img'}
-              statPTS={'20.1'}
-              statREB={'10.2'}
-              statAST={'8.2'}
-              statFG={'54.3'}
-              statRankPTS={'1'}
-              statRankREB={'2'}
-              statRankAST={'3'}
-              statRankFG={'4'}
-              stat={'20pts '}
-              hightlightLink={'jeje6 JEJE320 LODJ'}
+              pictureId={AwardsDatas.DEF.pictureID}
+              playerName={AwardsDatas.DEF.name}
+              team={AwardsDatas.DEF.team}
+              position={AwardsDatas.DEF.position}
+              pictureTeamPlayer={AwardsDatas.DEF.pictureTeamPlayer}
+              birth={AwardsDatas.DEF.birth}
+              award={AwardsDatas.DEF.award}
+              pictureContains={AwardsDatas.DEF.pictureContains}
+              statTitle1={AwardsDatas.DEF.statTitle1}
+              statTitle2={AwardsDatas.DEF.statTitle2}
+              statTitle3={AwardsDatas.DEF.statTitle3}
+              statTitle4={AwardsDatas.DEF.statTitle4}
+              statPTS={AwardsDatas.DEF.statPTS}
+              statREB={AwardsDatas.DEF.statREB}
+              statAST={AwardsDatas.DEF.statBLK}
+              statFG={AwardsDatas.DEF.statSTL}
+              statRankPTS={AwardsDatas.DEF.statRankPTS}
+              statRankREB={AwardsDatas.DEF.statRankREB}
+              statRankAST={AwardsDatas.DEF.statRankBLK}
+              statRankFG={AwardsDatas.DEF.statRankSTL}
+              hightlightLink={'piloupilou.com'}
             />
           </div>
           <div className="articles bloc">
             <Awards
-              pictureId={'img'}
-              playerName={'BERNARD CAMPAND'}
-              team={'bull'}
-              position={'G'}
-              pictureTeamPlayer={'img'}
-              birth={'3/16/1994 (29yrs)'}
-              award={'award'}
-              pictureContains={'img'}
-              statPTS={'20.1'}
-              statREB={'10.2'}
-              statAST={'8.2'}
-              statFG={'54.3'}
-              statRankPTS={'1'}
-              statRankREB={'2'}
-              statRankAST={'3'}
-              statRankFG={'4'}
-              stat={'20pts '}
-              hightlightLink={'jeje6 JEJE320 LODJ'}
+              pictureId={AwardsDatas.MAN.pictureID}
+              playerName={AwardsDatas.MAN.name}
+              team={AwardsDatas.MAN.team}
+              position={AwardsDatas.MAN.position}
+              pictureTeamPlayer={AwardsDatas.MAN.pictureTeamPlayer}
+              birth={AwardsDatas.MAN.birth}
+              award={AwardsDatas.MAN.award}
+              pictureContains={AwardsDatas.MAN.pictureContains}
+              statTitle1={AwardsDatas.MAN.statTitle1}
+              statTitle2={AwardsDatas.MAN.statTitle2}
+              statTitle3={AwardsDatas.MAN.statTitle3}
+              statTitle4={AwardsDatas.MAN.statTitle4}
+              statPTS={AwardsDatas.MAN.statPTS}
+              statREB={AwardsDatas.MAN.statREB}
+              statAST={AwardsDatas.MAN.statAST}
+              statFG={AwardsDatas.MAN.statFG}
+              statRankPTS={AwardsDatas.MAN.statRankPTS}
+              statRankREB={AwardsDatas.MAN.statRankREB}
+              statRankAST={AwardsDatas.MAN.statRankAST}
+              statRankFG={AwardsDatas.MAN.statRankFG}
+              hightlightLink={'piloupilou.com'}
             />
           </div>
           <div className="articles bloc">
             <Awards
-              pictureId={'img'}
-              playerName={'player name'}
-              team={'bull'}
-              position={'G'}
-              pictureTeamPlayer={'img'}
-              birth={'3/16/1994 (29yrs)'}
-              award={'award'}
-              pictureContains={'img'}
-              statPTS={'20.1'}
-              statREB={'10.2'}
-              statAST={'8.2'}
-              statFG={'54.3'}
-              statRankPTS={'1'}
-              statRankREB={'2'}
-              statRankAST={'3'}
-              statRankFG={'4'}
-              stat={'20pts '}
-              hightlightLink={'jeje6 JEJE320 LODJ'}
+              pictureId={AwardsDatas.CLU.pictureID}
+              playerName={AwardsDatas.CLU.name}
+              team={AwardsDatas.CLU.team}
+              position={AwardsDatas.CLU.position}
+              pictureTeamPlayer={AwardsDatas.CLU.pictureTeamPlayer}
+              birth={AwardsDatas.CLU.birth}
+              award={AwardsDatas.CLU.award}
+              pictureContains={AwardsDatas.CLU.pictureContains}
+              statTitle1={AwardsDatas.CLU.statTitle1}
+              statTitle2={AwardsDatas.CLU.statTitle2}
+              statTitle3={AwardsDatas.CLU.statTitle3}
+              statTitle4={AwardsDatas.CLU.statTitle4}
+              statPTS={AwardsDatas.CLU.statPTS}
+              statREB={AwardsDatas.CLU.statREB}
+              statAST={AwardsDatas.CLU.statAST}
+              statFG={AwardsDatas.CLU.statFG}
+              statRankPTS={AwardsDatas.CLU.statRankPTS}
+              statRankREB={AwardsDatas.CLU.statRankREB}
+              statRankAST={AwardsDatas.CLU.statRankAST}
+              statRankFG={AwardsDatas.CLU.statRankFG}
+              hightlightLink={'piloupilou.com'}
             />
           </div>
           <div className="articles bloc">
             <Awards
-              pictureId={'img'}
-              playerName={'player name'}
-              team={'bull'}
-              position={'G'}
-              pictureTeamPlayer={'img'}
-              birth={'3/16/1994 (29yrs)'}
-              award={'award'}
-              pictureContains={'img'}
-              statPTS={'20.1'}
-              statREB={'10.2'}
-              statAST={'8.2'}
-              statFG={'54.3'}
-              statRankPTS={'1'}
-              statRankREB={'2'}
-              statRankAST={'3'}
-              statRankFG={'4'}
-              stat={'20pts '}
-              hightlightLink={'jeje6 JEJE320 LODJ'}
+              pictureId={AwardsDatas.MIP.pictureID}
+              playerName={AwardsDatas.MIP.name}
+              team={AwardsDatas.MIP.team}
+              position={AwardsDatas.MIP.position}
+              pictureTeamPlayer={AwardsDatas.MIP.pictureTeamPlayer}
+              birth={AwardsDatas.MIP.birth}
+              award={AwardsDatas.MIP.award}
+              pictureContains={AwardsDatas.MIP.pictureContains}
+              statTitle1={AwardsDatas.MIP.statTitle1}
+              statTitle2={AwardsDatas.MIP.statTitle2}
+              statTitle3={AwardsDatas.MIP.statTitle3}
+              statTitle4={AwardsDatas.MIP.statTitle4}
+              statPTS={AwardsDatas.MIP.statPTS}
+              statREB={AwardsDatas.MIP.statREB}
+              statAST={AwardsDatas.MIP.statAST}
+              statFG={AwardsDatas.MIP.statFG}
+              statRankPTS={AwardsDatas.MIP.statRankPTS}
+              statRankREB={AwardsDatas.MIP.statRankREB}
+              statRankAST={AwardsDatas.MIP.statRankAST}
+              statRankFG={AwardsDatas.MIP.statRankFG}
+              hightlightLink={'piloupilou.com'}
+            />
+          </div>
+          <div className="articles bloc">
+            <Awards
+              pictureId={AwardsDatas.ROO.pictureID}
+              playerName={AwardsDatas.ROO.name}
+              team={AwardsDatas.ROO.team}
+              position={AwardsDatas.ROO.position}
+              pictureTeamPlayer={AwardsDatas.ROO.pictureTeamPlayer}
+              birth={AwardsDatas.ROO.birth}
+              award={AwardsDatas.ROO.award}
+              pictureContains={AwardsDatas.ROO.pictureContains}
+              statTitle1={AwardsDatas.ROO.statTitle1}
+              statTitle2={AwardsDatas.ROO.statTitle2}
+              statTitle3={AwardsDatas.ROO.statTitle3}
+              statTitle4={AwardsDatas.ROO.statTitle4}
+              statPTS={AwardsDatas.ROO.statPTS}
+              statREB={AwardsDatas.ROO.statREB}
+              statAST={AwardsDatas.ROO.statAST}
+              statFG={AwardsDatas.ROO.statFG}
+              statRankPTS={AwardsDatas.ROO.statRankPTS}
+              statRankREB={AwardsDatas.ROO.statRankREB}
+              statRankAST={AwardsDatas.ROO.statRankAST}
+              statRankFG={AwardsDatas.ROO.statRankFG}
+              hightlightLink={'piloupilou.com'}
+            />
+          </div>
+          <div className="articles bloc">
+            <Awards
+              pictureId={AwardsDatas.COA.pictureID}
+              playerName={AwardsDatas.COA.name}
+              team={AwardsDatas.COA.team}
+              position={AwardsDatas.COA.position}
+              pictureTeamPlayer={AwardsDatas.COA.pictureTeamPlayer}
+              birth={AwardsDatas.COA.birth}
+              award={AwardsDatas.COA.award}
+              pictureContains={AwardsDatas.COA.pictureContains}
+              statTitle1={AwardsDatas.COA.statTitle1}
+              statTitle2={AwardsDatas.COA.statTitle2}
+              statTitle3={AwardsDatas.COA.statTitle3}
+              statTitle4={AwardsDatas.COA.statTitle4}
+              statPTS={AwardsDatas.COA.statWIN}
+              statREB={AwardsDatas.COA.statLOS}
+              statAST={AwardsDatas.COA.statRAT}
+              statFG={AwardsDatas.COA.statGAM}
+              statRankPTS={AwardsDatas.COA.statRankWIN}
+              statRankREB={AwardsDatas.COA.statRankRAT}
+              statRankAST={AwardsDatas.COA.statRankAST}
+              statRankFG={AwardsDatas.COA.statRankGAM}
+              hightlightLink={'piloupilou.com'}
             />
           </div>
         </div>

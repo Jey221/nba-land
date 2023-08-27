@@ -12,18 +12,18 @@
 .awardsContainer {
   display: flex;
   flex-direction: column;
-  height: 800px;
+  height: 1000px;
 }
 .bloc {
-  height: 70px;
+  height: 100px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 4%;
   flex-grow: 1;
   transition: flex-grow 0.4s ease-out;
   overflow: hidden;
   position: relative;
+  padding: 0 1%;
 }
 .active {
   flex-grow: 1000;
@@ -31,20 +31,43 @@
 .bloc * {
   pointer-events: none;
 }
-.blocTop {
-  height: 70px;
-}
 .topBloc {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.IDAward {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.IDAward img {
+  width: 150px;
+}
+.awardTitle {
+  font-size: 3vw;
+  margin: 0%;
+}
+.line {
+  width: 27%;
+  height: 5px;
+  border-radius: 2px;
+  background: black;
+  margin: auto;
+}
+.playerNameTitle {
+  margin: 0;
+}
 .contenuAward {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.logoTeamPlayer {
+  width: 3vw;
 }
 /* GESTION STAT AWARDS */
 .contentStat {

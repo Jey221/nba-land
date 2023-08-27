@@ -10,17 +10,24 @@ export default function Awards({
   birth,
   award,
   pictureContains,
+  statTitle1,
   statPTS,
+  statTitle2,
   statREB,
+  statTitle3,
   statAST,
+  statTitle4,
   statFG,
-  statRank,
+  statRankPTS,
+  statRankREB,
+  statRankAST,
+  statRankFG,
   hightlightLink,
 }) {
   return (
     <>
       <div className="topBloc">
-        <div className="rondAward">
+        <div className="IDAward">
           <img src={pictureId} alt={playerName} />
         </div>
         <p className="awardTitle">{award}</p>
@@ -41,25 +48,25 @@ export default function Awards({
               <p>2022-2023 Season Stats</p>
             </div>
             <div className="contentStat">
-              <div>
-                <p>PTS</p>
-                <p>{statPTS}</p>
-                <p>{statRank}</p>
+              <div className="statRow">
+                <p className="statTitle">{statTitle1}</p>
+                <p className="statNum">{statPTS}</p>
+                <p className="statRan">{statRankPTS}</p>
               </div>
-              <div>
-                <p>PTS</p>
-                <p>{statREB}</p>
-                <p>{statRank}</p>
+              <div className="statRow">
+                <p className="statTitle">{statTitle2}</p>
+                <p className="statNum">{statREB}</p>
+                <p className="statRan">{statRankREB}</p>
               </div>
-              <div>
-                <p>PTS</p>
-                <p>{statAST}</p>
-                <p>{statRank}</p>
+              <div className="statRow">
+                <p className="statTitle">{statTitle3}</p>
+                <p className="statNum">{statAST}</p>
+                <p className="statRan">{statRankAST}</p>
               </div>
-              <div>
-                <p>PTS</p>
-                <p>{statFG}</p>
-                <p>{statRank}</p>
+              <div className="statRow">
+                <p className="statTitle">{statTitle4}</p>
+                <p className="statNum">{statFG}</p>
+                <p className="statRan">{statRankFG}</p>
               </div>
             </div>
           </div>

@@ -1,0 +1,182 @@
+//AWARDS DATA
+// gestion des images dans les blocs Awards
+import IDEmbiid from '../assets/images/trophies/IDEmbiid.png';
+import pictureContainMVP from '../assets/images/trophies/embiid_mvp2.jpg';
+import IDJacks from '../assets/images/trophies/IDJacks.png';
+import pictureContainDEF from '../assets/images/trophies/jarren.jpg';
+import IDFox from '../assets/images/trophies/IDFox.png';
+import pictureContainClu from '../assets/images/trophies/fox.jpg';
+import IDBrog from '../assets/images/trophies/IDBrogdon.png';
+import pictureContain6e from '../assets/images/trophies/malcolm.jpeg';
+import IDMark from '../assets/images/trophies/IDMark.png';
+import pictureContainMIP from '../assets/images/trophies/lauri.jpg';
+import IDBanch from '../assets/images/trophies/IDBanchero.png';
+import pictureContainRO from '../assets/images/trophies/banchero.jpg';
+import IDBrown from '../assets/images/trophies/IDBrown.jpeg';
+import pictureContainCOA from '../assets/images/trophies/mike.jpg';
+import LOGOS from './LogosTeams';
+
+// données Classement 2022-2023 Est/Ouest
+export const AwardsDatas = {
+  MVP: {
+    award: 'Most Valuable Player of the year',
+    name: 'Joel Embid',
+    team: '76ers',
+    position: 'C',
+    birth: '3/16/1994 (29yrs)',
+    statTitle1: 'PTS',
+    statTitle2: 'REB',
+    statTitle3: 'AST',
+    statTitle4: 'FG%',
+    statPTS: '33.1',
+    statREB: '10.2',
+    statAST: '4.2',
+    statFG: '54.8',
+    statRankPTS: '1st',
+    statRankREB: '8th',
+    statRankAST: '51th',
+    statRankFG: '20th',
+    pictureID: IDEmbiid,
+    pictureTeamPlayer: LOGOS.PHI,
+    pictureContains: pictureContainMVP,
+  },
+  DEF: {
+    award: 'Defensive Player of the year',
+    name: 'Jaren Jackson JR.',
+    team: 'Grizzlies',
+    position: 'PF',
+    birth: '9/15/1999 (23yrs)',
+    statTitle1: 'PTS',
+    statTitle2: 'REB',
+    statTitle3: 'BLK',
+    statTitle4: 'STL',
+    statPTS: '18.6',
+    statREB: '6.8',
+    statBLK: '3',
+    statSTL: '1',
+    statRankPTS: '49th',
+    statRankREB: '40th',
+    statRankBLK: '1st',
+    statRankSTL: '76th',
+    pictureID: IDJacks,
+    pictureTeamPlayer: LOGOS.MEM,
+    pictureContains: pictureContainDEF,
+  },
+  MAN: {
+    award: 'Sixth Man of the year',
+    name: 'Malcolm Brogdon',
+    team: 'Celtics',
+    position: 'PG',
+    birth: '12/11/1992 (30yrs)',
+    statTitle1: 'PTS',
+    statTitle2: 'REB',
+    statTitle3: 'AST',
+    statTitle4: 'FG%',
+    statPTS: '14.9',
+    statREB: '4.2',
+    statAST: '3.7',
+    statFG: '48.4',
+    statRankPTS: '75th',
+    statRankREB: '114th',
+    statRankAST: '65th',
+    statRankFG: '59th',
+    pictureID: IDBrog,
+    pictureTeamPlayer: LOGOS.BOS,
+    pictureContains: pictureContain6e,
+  },
+  CLU: {
+    award: 'Clutch Player of the year',
+    name: "De'Aaron Fox",
+    team: 'Kings',
+    position: 'PG',
+    birth: '12/20/1997 (25yrs)',
+    statTitle1: 'PTS',
+    statTitle2: 'REB',
+    statTitle3: 'AST',
+    statTitle4: 'FG%',
+    statPTS: '25',
+    statREB: '4.2',
+    statAST: '6.1',
+    statFG: '51.2',
+    statRankPTS: '14th',
+    statRankREB: '113th',
+    statRankAST: '23rd',
+    statRankFG: '32nd',
+    pictureID: IDFox,
+    pictureTeamPlayer: LOGOS.SAC,
+    pictureContains: pictureContainClu,
+  },
+  MIP: {
+    award: 'Most Improved Player of the year',
+    name: 'Lauri Markkanen',
+    team: 'Jazz',
+    position: 'PF',
+    birth: '5/22/1997 (26yrs)',
+    statTitle1: 'PTS',
+    statTitle2: 'REB',
+    statTitle3: 'AST',
+    statTitle4: 'FG%',
+    statPTS: '25.6',
+    statREB: '8.6',
+    statAST: '1.9',
+    statFG: '49.9',
+    statRankPTS: '12th',
+    statRankREB: '24th',
+    statRankAST: '132nd',
+    statRankFG: '41st',
+    pictureID: IDMark,
+    pictureTeamPlayer: LOGOS.UTA,
+    pictureContains: pictureContainMIP,
+  },
+  ROO: {
+    award: 'Rookie of the year',
+    name: 'Paolo Banchero',
+    team: 'Magic',
+    position: 'PF',
+    birth: '11/12/2002 (20yrs)',
+    statTitle1: 'PTS',
+    statTitle2: 'REB',
+    statTitle3: 'AST',
+    statTitle4: 'FG%',
+    statPTS: '20',
+    statREB: '6.9',
+    statAST: '3.7',
+    statFG: '42.7',
+    statRankPTS: '43rd',
+    statRankREB: '38th',
+    statRankAST: '61st',
+    statRankFG: '111th',
+    pictureID: IDBanch,
+    pictureTeamPlayer: LOGOS.ORL,
+    pictureContains: pictureContainRO,
+  },
+  COA: {
+    award: 'Coach of the year',
+    name: 'Mike Brown',
+    team: 'Kings',
+    position: 'F',
+    birth: '3/5/1970 (53yrs)',
+    statTitle1: 'WIN',
+    statTitle2: 'LOS',
+    statTitle3: 'RAT%',
+    statTitle4: 'GAME',
+    statWIN: '48',
+    statLOS: '34',
+    statRAT: '58.5',
+    statGAM: '82',
+    statRankWIN: '7th',
+    statRankLOS: '7th',
+    statRankRAT: '7th',
+    statRankGAM: '',
+    pictureID: IDBrown,
+    pictureTeamPlayer: LOGOS.SAC,
+    pictureContains: pictureContainCOA,
+  },
+};
+
+/* 
+              pictureId={'img'}
+              pictureTeamPlayer={'img'}
+              pictureContains={'img'}
+
+*/
