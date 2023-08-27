@@ -31,7 +31,7 @@ export default function Ranking() {
               <tbody>
                 {RankingTeam.RankingEast.map((team) => {
                   return (
-                    <tr>
+                    <tr key={team.name}>
                       <td>{team.rank}</td>
                       <td>{team.name}</td>
                       <td>{team.ratio}</td>
@@ -59,7 +59,7 @@ export default function Ranking() {
               <tbody>
                 {RankingTeam.RankingWest.map((team) => {
                   return (
-                    <tr>
+                    <tr key={team.name}>
                       <td>{team.rank}</td>
                       <td>{team.name}</td>
                       <td>{team.ratio}</td>

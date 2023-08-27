@@ -8,6 +8,49 @@
   border: 4px outset #c08725;
   padding: 2%;
 }
+/* GESTION BLOC */
+.awardsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+}
+.bloc {
+  height: 70px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4%;
+  flex-grow: 1;
+  transition: flex-grow 0.4s ease-out;
+  overflow: hidden;
+  position: relative;
+}
+.active {
+  flex-grow: 1000;
+}
+.bloc * {
+  pointer-events: none;
+}
+.blocTop {
+  height: 70px;
+}
+.topBloc {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contenuAward {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* GESTION STAT AWARDS */
+.contentStat {
+  display: flex;
+}
+/* GESTION WINNER */
 .infoWinnerNba {
   width: 40%;
   display: flex;
