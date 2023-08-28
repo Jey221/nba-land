@@ -12,7 +12,8 @@
 .awardsContainer {
   display: flex;
   flex-direction: column;
-  height: 1000px;
+  height: 1070px;
+  align-items: center;
 }
 .bloc {
   height: 100px;
@@ -24,6 +25,7 @@
   overflow: hidden;
   position: relative;
   padding: 0 1%;
+  margin: 2px;
 }
 .active {
   flex-grow: 1000;
@@ -36,6 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1%;
 }
 .IDAward {
   border-radius: 50%;
@@ -63,15 +66,52 @@
 .contenuAward {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.pictureContent {
+  width: 520px;
+  border-radius: 10px;
+}
+.infosAward {
+  width: 40vw;
+}
+.infoTeamZone {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 5%;
+}
+.infoTeamZone p {
+  margin: 0;
 }
 .logoTeamPlayer {
   width: 3vw;
 }
+#Coach {
+  width: 332px;
+}
 /* GESTION STAT AWARDS */
+.statsAward {
+  border-radius: 20px;
+  border: 4px outset #c08725;
+}
+.topStat {
+  border-bottom: 4px outset #c08725;
+  background-color: #000000cf;
+  border-radius: 20px 20px 0 0;
+}
 .contentStat {
   display: flex;
+  justify-content: space-around;
+  background-color: #2f2f2fe0;
+}
+.statRow p {
+  margin-bottom: 1vh;
+}
+.statTitle,
+.statRan {
+  color: rgba(245, 222, 179, 0.61);
 }
 /* GESTION WINNER */
 .infoWinnerNba {

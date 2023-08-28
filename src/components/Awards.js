@@ -35,13 +35,23 @@ export default function Awards({
         <p className="playerNameTitle">{playerName}</p>
       </div>
       <div className="contenuAward">
-        <img src={pictureContains} alt={playerName} />
+        <img
+          src={pictureContains}
+          alt={playerName}
+          className="pictureContent"
+          id={position}
+        />
         <div className="infosAward">
           <h2>{playerName}</h2>
-          <img className="logoTeamPlayer" src={pictureTeamPlayer} alt={team} />
-          <p>
-            {team} {position}
-          </p>
+          <div className="infoTeamZone">
+            <img
+              className="logoTeamPlayer"
+              src={pictureTeamPlayer}
+              alt={team}
+            />
+            <p>{team}</p>
+            <p>"{position}"</p>
+          </div>
           <p>Birthdate {birth}</p>
           <div className="statsAward">
             <div className="topStat">

@@ -235,8 +235,8 @@ export default function Trophies() {
               statAST={AwardsDatas.COA.statRAT}
               statFG={AwardsDatas.COA.statGAM}
               statRankPTS={AwardsDatas.COA.statRankWIN}
-              statRankREB={AwardsDatas.COA.statRankRAT}
-              statRankAST={AwardsDatas.COA.statRankAST}
+              statRankREB={AwardsDatas.COA.statRankLOS}
+              statRankAST={AwardsDatas.COA.statRankRAT}
               statRankFG={AwardsDatas.COA.statRankGAM}
               hightlightLink={'piloupilou.com'}
             />

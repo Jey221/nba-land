@@ -1,7 +1,7 @@
 //AWARDS DATA
 // gestion des images dans les blocs Awards
 import IDEmbiid from '../assets/images/trophies/IDEmbiid.png';
-import pictureContainMVP from '../assets/images/trophies/embiid_mvp2.jpg';
+import pictureContainMVP from '../assets/images/trophies/embiid_mvp.jpg';
 import IDJacks from '../assets/images/trophies/IDJacks.png';
 import pictureContainDEF from '../assets/images/trophies/jarren.jpg';
 import IDFox from '../assets/images/trophies/IDFox.png';
@@ -20,7 +20,7 @@ import LOGOS from './LogosTeams';
 export const AwardsDatas = {
   MVP: {
     award: 'Most Valuable Player of the year',
-    name: 'Joel Embid',
+    name: 'Joel Embiid',
     team: '76ers',
     position: 'C',
     birth: '3/16/1994 (29yrs)',
@@ -154,7 +154,7 @@ export const AwardsDatas = {
     award: 'Coach of the year',
     name: 'Mike Brown',
     team: 'Kings',
-    position: 'F',
+    position: 'Coach',
     birth: '3/5/1970 (53yrs)',
     statTitle1: 'WIN',
     statTitle2: 'LOS',
