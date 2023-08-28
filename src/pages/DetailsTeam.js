@@ -12,14 +12,13 @@ import * as BsIcons from 'react-icons/bs';
 import * as BiIcons from 'react-icons/bi';
 // import * as FaIcons from 'react-icons/fa';
 import ScrollBar from '../components/ScrollBar';
+import { Abbreviations } from '../data/Abreviations';
 
 export default function Details() {
   const [dataDetailTeam, setDataDetailTeam] = useState([]); // hook pour récupération des données des équipes
   const [currentTeam, setCurrentTeam] = useState(); // hook pour récupération des données de l'équipe sélectionnée
   const id = useParams(); // localisation de l'équipe sélectionnée grâce a l'url
   // Chargement des données des équipes
-  console.log(dataDetailTeam);
-  console.log(id);
   useEffect(() => {
     async function detailLoad() {
       const datas = await getDetail(id.idTeams);
@@ -34,6 +33,9 @@ export default function Details() {
       setCurrentTeam(dataDetailTeam.team);
     }
   }, [dataDetailTeam]);
+  console.log(dataDetailTeam);
+  console.log(id);
+  console.log(Abbreviations);
   return (
     <div>
       <Loading />
@@ -51,7 +53,7 @@ export default function Details() {
                   <div className="leftZone">
                     <div className="logo">
                       <img
-                        src={LOGOS[id.idTeams]}
+                        src={LOGOS[Abbreviations[currentTeam.abbreviation]]}
                         alt={currentTeam.abbreviation}
                         className="logoTeamDetail"
                         id={currentTeam.abbreviation}
@@ -105,13 +107,17 @@ export default function Details() {
                   <div
                     className="parquet"
                     style={{
-                      backgroundImage: `url(${PARQUETS[id.idTeams]})`,
+                      backgroundImage: `url(${
+                        PARQUETS[Abbreviations[currentTeam.abbreviation]]
+                      })`,
                     }}
                   ></div>
                   <div
                     className="arena"
                     style={{
-                      backgroundImage: `url(${ARENA[id.idTeams]})`,
+                      backgroundImage: `url(${
+                        ARENA[Abbreviations[currentTeam.abbreviation]]
+                      })`,
                     }}
                   ></div>
                 </div>

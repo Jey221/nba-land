@@ -3,6 +3,7 @@ import * as AiIcons from 'react-icons/ai';
 import LOGOS from '../data/LogosTeams';
 import ARENA from '../data/Arena';
 import { Link } from 'react-router-dom';
+import { Abbreviations } from '../data/Abreviations';
 
 export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
   // liaison entre les logos et les équipes
@@ -10,10 +11,11 @@ export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
   // liaison entre les images d'arène et les équipes
   const arena = ARENA[selectedTeam.abbreviation];
   // mise en forme de l'image de l'arène
+
   const arenaStyle = {
     backgroundImage: `url(${arena})`,
   };
-
+  const location = Abbreviations[selectedTeam.abbreviation];
   return (
     <div className="modalBackground" onClick={setIsOpenModal.bind(this, false)}>
       <div className="modalContent" onClick={(e) => e.stopPropagation()}>
@@ -24,7 +26,7 @@ export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
           </div>
         </header>
         <div className="modalBody">
-          <Link to={`/teams/details/${selectedTeam.abbreviation}`}>
+          <Link to={`/teams/details/${location}`}>
             <div className="logoZone">
               <img
                 src={logo}
