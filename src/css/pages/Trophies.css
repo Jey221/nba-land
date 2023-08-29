@@ -125,7 +125,6 @@
   align-items: center;
   justify-content: space-evenly;
 }
-/* GESTION IMAGES */
 #CHistory {
   width: 45%;
   border-radius: 15%;
@@ -137,4 +136,7 @@
 }
 .opponentLogo {
   width: 20%;
+}
+.idMVP img {
+  width: 150px;
 }

@@ -10,6 +10,7 @@ import winLogo from '../assets/logos/SVG-nuggets.svg';
 import CHistory from '../assets/images/trophies/chasingHistory.png';
 import heatLogo from '../assets/logos/SVG-heat.svg';
 import finals from '../assets/images/trophies/final.jpeg';
+import idMvp from '../assets/images/trophies/IDJokic.png';
 import Carroussel from '../components/Carroussel';
 import ScrollBar from '../components/ScrollBar';
 import Awards from '../components/Awards';
@@ -62,8 +63,16 @@ export default function Trophies() {
             </div>
             <p>The Nuggets are NBA champs after a Game 5</p>
             <p>MVP : Nikola Jokic</p>
+            <div className="idMVP">
+              <img src={idMvp} alt="Nikola Jokic" className="idJokic" />
+            </div>
           </div>
         </div>
+        <h2>NBA All Teams</h2>
+        <div className="articles blocTeam"></div>
+        <div className="articles blocTeam"></div>
+        <div className="articles blocTeam"></div>
+
         <h2>NBA Awards</h2>
         <div className="awardsContainer">
           <div className="articles bloc active">
@@ -242,8 +251,6 @@ export default function Trophies() {
             />
           </div>
         </div>
-        <h2>NBA All Teams</h2>
-        <div className="articles"></div>
       </div>
       <Footer />
     </div>
