@@ -73,19 +73,19 @@ export default function Trophies() {
         <div className="allTeamContainer">
           <Dropdown
             allTeam={'ALL TEAM'}
-            team1={'1st TEAM ALL NBA'}
-            team2={'2nd TEAM ALL NBA'}
-            team3={'3th TEAM ALL NBA'}
+            team1={'THE 1st TEAM ALL NBA'}
+            team2={'THE 2nd TEAM ALL NBA'}
+            team3={'THE 3rd TEAM ALL NBA'}
           />
           <Dropdown
             allTeam={'ALL ROOKIE'}
-            team1={'1st TEAM ROOKIE'}
-            team2={'2nd TEAM ROOKIE'}
+            team1={'THE 1st TEAM ROOKIE'}
+            team2={'THE 2nd TEAM ROOKIE'}
           />
           <Dropdown
             allTeam={'ALL DEFENSIVE'}
-            team1={'1st TEAM DEFENSIVE'}
-            team2={'2nd TEAM DEFENSIVE'}
+            team1={'THE 1st TEAM DEFENSIVE'}
+            team2={'THE 2nd TEAM DEFENSIVE'}
           />
         </div>
         <h2>NBA Awards</h2>
