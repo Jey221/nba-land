@@ -16,6 +16,7 @@ import ScrollBar from '../components/ScrollBar';
 import Awards from '../components/Awards';
 import { useEffect, useState } from 'react';
 import { AwardsDatas } from '../data/Awards';
+import Dropdown from '../components/Dropdown';
 
 export default function Trophies() {
   const [allBlocs, setAllBlocs] = useState([]);
@@ -24,7 +25,7 @@ export default function Trophies() {
   }, []);
   allBlocs.forEach((bloc) => {
     bloc.addEventListener('click', (e) => {
-      //console.log(e.target);
+      console.log(e.target.classList.contains('active'));
       e.target.classList.add('active');
 
       for (let i = 0; i < allBlocs.length; i++) {
@@ -34,10 +35,10 @@ export default function Trophies() {
       }
     });
   });
-  console.log(AwardsDatas.MVP[2]);
+
   return (
     <div>
-      <Loading />
+      {/* <Loading /> */}
       <Header />
       <ScrollBar />
       <div>
@@ -68,11 +69,25 @@ export default function Trophies() {
             </div>
           </div>
         </div>
-        <h2>NBA All Teams</h2>
-        <div className="articles blocTeam"></div>
-        <div className="articles blocTeam"></div>
-        <div className="articles blocTeam"></div>
-
+        <h2 style={{ marginTop: '3%' }}>All Teams NBA</h2>
+        <div className="allTeamContainer">
+          <Dropdown
+            allTeam={'ALL TEAM'}
+            team1={'1st TEAM ALL NBA'}
+            team2={'2nd TEAM ALL NBA'}
+            team3={'3th TEAM ALL NBA'}
+          />
+          <Dropdown
+            allTeam={'ALL ROOKIE'}
+            team1={'1st TEAM ROOKIE'}
+            team2={'2nd TEAM ROOKIE'}
+          />
+          <Dropdown
+            allTeam={'ALL DEFENSIVE'}
+            team1={'1st TEAM DEFENSIVE'}
+            team2={'2nd TEAM DEFENSIVE'}
+          />
+        </div>
         <h2>NBA Awards</h2>
         <div className="awardsContainer">
           <div className="articles bloc active">

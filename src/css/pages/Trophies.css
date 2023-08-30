@@ -15,6 +15,7 @@
   height: 1070px;
   align-items: center;
 }
+
 .bloc {
   height: 100px;
   flex-direction: column;
