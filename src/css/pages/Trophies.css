@@ -141,3 +141,26 @@
 .idMVP img {
   width: 150px;
 }
+.highlightFinal {
+  background-color: black;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 50%;
+  justify-content: center;
+  border-radius: 20px;
+  border: 4px outset #c08725;
+  padding: 3%;
+  cursor: pointer;
+}
+.highlightFinal:active {
+  background: linear-gradient(#c08725, #bdae93);
+  border: 4px outset black;
+}
+.highlightFinal p {
+  margin: 0%;
+}
+.highlightFinal svg {
+  font-size: 24px;
+  fill: red;
+}

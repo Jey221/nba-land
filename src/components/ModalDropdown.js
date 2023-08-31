@@ -11,7 +11,7 @@ export default function ModalDropdown({ setIsOpenModal, target }) {
             <AiIcons.AiOutlineCloseCircle />
           </div>
         </header>
-        <div className="modalBody">
+        <div className="modalBodyAwards">
           <img src={target} alt="all team" />
         </div>
       </div>

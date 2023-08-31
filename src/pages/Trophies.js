@@ -5,6 +5,7 @@ import { getDetail } from '../data/datas';
 import '../css/pages/Trophies.css';
 import Header from '../components/Header/Header';
 import Loading from '../components/Loading';
+import * as BsIcons from 'react-icons/bs';
 import Footer from '../components/Footer/Footer';
 import winLogo from '../assets/logos/SVG-nuggets.svg';
 import CHistory from '../assets/images/trophies/chasingHistory.png';
@@ -17,8 +18,10 @@ import Awards from '../components/Awards';
 import { useEffect, useState } from 'react';
 import { AwardsDatas } from '../data/Awards';
 import Dropdown from '../components/Dropdown';
+import ModalPlay from '../components/ModalPlay';
 
 export default function Trophies() {
+  // MISE EN DES BLOCS AWARDS
   const [allBlocs, setAllBlocs] = useState([]);
   useEffect(() => {
     setAllBlocs(document.querySelectorAll('.bloc'));
@@ -35,6 +38,14 @@ export default function Trophies() {
       }
     });
   });
+
+  // LIEN VIDEO
+  const [isOpenModalFinal, setIsOpenModalFinal] = useState(false);
+  function clickHighlight() {
+    setIsOpenModalFinal(true);
+    console.log('highlight');
+  }
+  console.log(isOpenModalFinal);
 
   return (
     <div>
@@ -63,6 +74,11 @@ export default function Trophies() {
               />
             </div>
             <p>The Nuggets are NBA champs after a Game 5</p>
+            <button className="highlightFinal" onClick={clickHighlight}>
+              <p>highlights</p>
+              <BsIcons.BsYoutube />
+            </button>
+
             <p>MVP : Nikola Jokic</p>
             <div className="idMVP">
               <img src={idMvp} alt="Nikola Jokic" className="idJokic" />
@@ -268,6 +284,9 @@ export default function Trophies() {
         </div>
       </div>
       <Footer />
+      {isOpenModalFinal && (
+        <ModalPlay setIsOpenModalFinal={setIsOpenModalFinal} />
+      )}
     </div>
   );
 }
