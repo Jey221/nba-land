@@ -28,7 +28,6 @@ export default function Trophies() {
   }, []);
   allBlocs.forEach((bloc) => {
     bloc.addEventListener('click', (e) => {
-      console.log(e.target.classList.contains('active'));
       e.target.classList.add('active');
 
       for (let i = 0; i < allBlocs.length; i++) {
@@ -40,13 +39,12 @@ export default function Trophies() {
   });
 
   // LIEN VIDEO
-  const [isOpenModalFinal, setIsOpenModalFinal] = useState(false);
-  function clickHighlight() {
+  const [isOpenModalPlay, setIsOpenModalFinal] = useState(false);
+  function modalVideo() {
     setIsOpenModalFinal(true);
     console.log('highlight');
   }
-  console.log(isOpenModalFinal);
-
+  console.log(isOpenModalPlay);
   return (
     <div>
       {/* <Loading /> */}
@@ -74,7 +72,7 @@ export default function Trophies() {
               />
             </div>
             <p>The Nuggets are NBA champs after a Game 5</p>
-            <button className="highlightFinal" onClick={clickHighlight}>
+            <button className="btnVideo" onClick={modalVideo}>
               <p>highlights</p>
               <BsIcons.BsYoutube />
             </button>
@@ -128,7 +126,9 @@ export default function Trophies() {
               statRankREB={AwardsDatas.MVP.statRankREB}
               statRankAST={AwardsDatas.MVP.statRankAST}
               statRankFG={AwardsDatas.MVP.statRankFG}
-              hightlightLink={'piloupilou.com'}
+              hightlightLink={
+                'https://youtu.be/Xxoi1Ua2T_o?si=Kq0QS7eopkQU1h-n'
+              }
             />
           </div>
           <div className="articles bloc">
@@ -153,7 +153,9 @@ export default function Trophies() {
               statRankREB={AwardsDatas.DEF.statRankREB}
               statRankAST={AwardsDatas.DEF.statRankBLK}
               statRankFG={AwardsDatas.DEF.statRankSTL}
-              hightlightLink={'piloupilou.com'}
+              hightlightLink={
+                'https://youtu.be/BFdQ3RY7eOI?si=HPU55G0a14kynSll'
+              }
             />
           </div>
           <div className="articles bloc">
@@ -178,7 +180,9 @@ export default function Trophies() {
               statRankREB={AwardsDatas.MAN.statRankREB}
               statRankAST={AwardsDatas.MAN.statRankAST}
               statRankFG={AwardsDatas.MAN.statRankFG}
-              hightlightLink={'piloupilou.com'}
+              hightlightLink={
+                'https://youtu.be/lRky5Xu5tu0?si=FsS04cmHv2gDmbTd'
+              }
             />
           </div>
           <div className="articles bloc">
@@ -203,7 +207,9 @@ export default function Trophies() {
               statRankREB={AwardsDatas.CLU.statRankREB}
               statRankAST={AwardsDatas.CLU.statRankAST}
               statRankFG={AwardsDatas.CLU.statRankFG}
-              hightlightLink={'piloupilou.com'}
+              hightlightLink={
+                'https://youtu.be/bhToEw8Fxb4?si=OTr6OCl8YRBuH7Xy'
+              }
             />
           </div>
           <div className="articles bloc">
@@ -228,7 +234,9 @@ export default function Trophies() {
               statRankREB={AwardsDatas.MIP.statRankREB}
               statRankAST={AwardsDatas.MIP.statRankAST}
               statRankFG={AwardsDatas.MIP.statRankFG}
-              hightlightLink={'piloupilou.com'}
+              hightlightLink={
+                'https://youtu.be/Con6oe71bcM?si=qBx8kDGEXPCpJcBa'
+              }
             />
           </div>
           <div className="articles bloc">
@@ -253,7 +261,9 @@ export default function Trophies() {
               statRankREB={AwardsDatas.ROO.statRankREB}
               statRankAST={AwardsDatas.ROO.statRankAST}
               statRankFG={AwardsDatas.ROO.statRankFG}
-              hightlightLink={'piloupilou.com'}
+              hightlightLink={
+                'https://youtu.be/llNddT0xI-Y?si=0IvllMpeiFr8n-ai'
+              }
             />
           </div>
           <div className="articles bloc">
@@ -278,43 +288,20 @@ export default function Trophies() {
               statRankREB={AwardsDatas.COA.statRankLOS}
               statRankAST={AwardsDatas.COA.statRankRAT}
               statRankFG={AwardsDatas.COA.statRankGAM}
-              hightlightLink={'piloupilou.com'}
+              hightlightLink={
+                'https://youtu.be/2fi5lwm-shQ?si=yHeyu__SAndNdAFe'
+              }
             />
           </div>
         </div>
       </div>
       <Footer />
-      {isOpenModalFinal && (
-        <ModalPlay setIsOpenModalFinal={setIsOpenModalFinal} />
+      {isOpenModalPlay && (
+        <ModalPlay
+          setIsOpenModalFinal={setIsOpenModalFinal}
+          url={'https://youtu.be/DXaq_hQkQN8?si=chcI2f_TVKAKbnQ1'}
+        />
       )}
     </div>
   );
 }
-/*
-  pictureId,
-  playerName,
-  team,
-  position,
-  pictureTeamPlayer,
-  birth,
-  award,
-  pictureContains,
-  statPTS,
-  statREB,
-  statAST,
-  statFG,
-  statRank,
-  hightlightLink,
-
-*/
-/*   const [allBlocs, setAllBlocs] = useState([]);
-  useEffect(() => {
-    setAllBlocs(document.querySelectorAll('.bloc'));
-  }, []);
-  console.log(allBlocs);
-  allBlocs.forEach((bloc) => {
-    bloc.addEventListener('click', (e) => {
-      console.log(e.target);
-    });
-  });
- */

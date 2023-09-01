@@ -1,5 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import * as BsIcons from 'react-icons/bs';
+import ModalPlay from './ModalPlay';
 
 export default function Awards({
   pictureId,
@@ -24,6 +25,11 @@ export default function Awards({
   statRankFG,
   hightlightLink,
 }) {
+  const [isOpenModalPlay, setIsOpenModalPlay] = useState(false);
+  function modalVideo() {
+    setIsOpenModalPlay(true);
+    console.log('highlight');
+  }
   return (
     <>
       <div className="topBloc">
@@ -80,32 +86,24 @@ export default function Awards({
               </div>
             </div>
           </div>
-          <Link>{hightlightLink}</Link>
+          <button
+            className="btnVideo"
+            onClick={(e) => {
+              e.stopPropagation();
+              modalVideo();
+            }}
+          >
+            <p>highlights</p>
+            <BsIcons.BsYoutube />
+          </button>
         </div>
       </div>
+      {isOpenModalPlay && (
+        <ModalPlay
+          setIsOpenModalFinal={setIsOpenModalPlay}
+          url={hightlightLink}
+        />
+      )}
     </>
   );
 }
-
-/* 
-
-<div className="bloc active">
-        <div className="bloc-haut">
-          <div className="rond">
-            <img src={pictureId} />
-          </div>
-          <p className="awardTitle">{award}</p>
-          <div className="line"></div>
-          <p className="playerNameTitle">{playerName}</p>
-        </div>
-        <div className="contenu">
-            <img src={picture} alt="">
-            <div className="infos">
-                <h2>{playerName}</h2>
-                <p>{stat}</p>
-                <Link>{hightlightLink}</Link>
-            </div>
-        </div>
-      </div>
-
-*/
