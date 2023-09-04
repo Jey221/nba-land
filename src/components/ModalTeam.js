@@ -16,6 +16,7 @@ export default function ModalTeam({ setIsOpenModal, selectedTeam }) {
     backgroundImage: `url(${arena})`,
   };
   const location = Abbreviations[selectedTeam.abbreviation];
+  console.log(location);
   return (
     <div className="modalBackground" onClick={setIsOpenModal.bind(this, false)}>
       <div className="modalContent" onClick={(e) => e.stopPropagation()}>

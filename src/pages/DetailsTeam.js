@@ -13,6 +13,7 @@ import * as BiIcons from 'react-icons/bi';
 // import * as FaIcons from 'react-icons/fa';
 import ScrollBar from '../components/ScrollBar';
 import { Abbreviations } from '../data/Abreviations';
+import { RankingAllTeam, RankingTeam } from '../data/RankingTeam';
 
 export default function Details() {
   const [dataDetailTeam, setDataDetailTeam] = useState([]); // hook pour récupération des données des équipes
@@ -67,10 +68,10 @@ export default function Details() {
                         {currentTeam.location}, {currentTeam.abbreviation}
                       </p>
                       <p>{currentTeam.standingSummary}</p>
-                      {/* <p>
-                        Ranking {currentTeam.nextEvent[0].season.displayName} :{' '}
-                        {currentTeam.nextEvent[0].seasonType.type}
-                      </p> */}
+                      <p>
+                        Ranking :{' '}
+                        {RankingAllTeam[dataDetailTeam.team.abbreviation]}
+                      </p>
                       <div className="colorsTeam">
                         <div
                           className="color colorTeam1"
@@ -94,8 +95,11 @@ export default function Details() {
                 <h2>{currentTeam.franchise.venue.fullName}</h2>
                 <h4>
                   <BiIcons.BiCurrentLocation />
-                  {currentTeam.franchise.venue.address.city},{' '}
-                  {currentTeam.franchise.venue.address.state}
+                  {currentTeam.franchise.venue.address &&
+                  currentTeam.franchise.venue.address.city &&
+                  currentTeam.franchise.venue.address.state
+                    ? `${currentTeam.franchise.venue.address.city}, ${currentTeam.franchise.venue.address.state}`
+                    : ''}{' '}
                 </h4>
                 <p>
                   <BsIcons.BsFillPersonFill />{' '}
