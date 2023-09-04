@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import * as BsIcons from 'react-icons/bs';
 import ModalPlay from './ModalPlay';
+import { Link } from 'react-router-dom';
 
 export default function Awards({
   pictureId,
   playerName,
   team,
+  teamAb,
   position,
   pictureTeamPlayer,
   birth,
@@ -28,8 +30,8 @@ export default function Awards({
   const [isOpenModalPlay, setIsOpenModalPlay] = useState(false);
   function modalVideo() {
     setIsOpenModalPlay(true);
-    console.log('highlight');
   }
+
   return (
     <>
       <div className="topBloc">
@@ -50,11 +52,14 @@ export default function Awards({
         <div className="infosAward">
           <h2>{playerName}</h2>
           <div className="infoTeamZone">
-            <img
-              className="logoTeamPlayer"
-              src={pictureTeamPlayer}
-              alt={team}
-            />
+            <Link to={`/teams/details/${teamAb}`}>
+              <img
+                className="logoTeamPlayer"
+                src={pictureTeamPlayer}
+                alt={team}
+                onClick={console.log('hi')}
+              />
+            </Link>
             <p>{team}</p>
             <p>"{position}"</p>
           </div>

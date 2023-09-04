@@ -13,7 +13,7 @@ import * as BiIcons from 'react-icons/bi';
 // import * as FaIcons from 'react-icons/fa';
 import ScrollBar from '../components/ScrollBar';
 import { Abbreviations } from '../data/Abreviations';
-import { RankingAllTeam, RankingTeam } from '../data/RankingTeam';
+import { RankingAllTeam } from '../data/RankingTeam';
 
 export default function Details() {
   const [dataDetailTeam, setDataDetailTeam] = useState([]); // hook pour récupération des données des équipes
@@ -37,7 +37,7 @@ export default function Details() {
 
   return (
     <div>
-      {/* <Loading /> */}
+      <Loading />
       <Header />
       <div initial="hidden" animate="show">
         <div>
@@ -89,6 +89,20 @@ export default function Details() {
                         alt={currentTeam.abbreviation}
                         className="logoTeamExpl"
                       />
+                      <div className="nextGame">
+                        <div className="NGSeason">
+                          <p>
+                            Season {currentTeam.nextEvent[0].season.displayName}
+                          </p>
+                        </div>
+                        <div className="NGYears">
+                          <p>next game</p>
+                          <p>{currentTeam.nextEvent[0].date}</p>
+                        </div>
+                        <div className="NGName">
+                          <p>{currentTeam.nextEvent[0].name}</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

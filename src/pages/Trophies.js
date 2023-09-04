@@ -19,6 +19,7 @@ import { useEffect, useState } from 'react';
 import { AwardsDatas } from '../data/Awards';
 import Dropdown from '../components/Dropdown';
 import ModalPlay from '../components/ModalPlay';
+import { Link } from 'react-router-dom';
 
 export default function Trophies() {
   // MISE EN DES BLOCS AWARDS
@@ -62,27 +63,57 @@ export default function Trophies() {
           <div className="infoWinnerNba">
             <img src={finals} alt="logo des finales" id="finals" />
             <div className="opponentFinal">
-              <img
-                src={winLogo}
-                alt="nba winners 2023"
-                className="opponentLogo"
-              />
+              <Link to={'/teams/details/DEN'} className="linkFinalTeam">
+                {' '}
+                <img
+                  src={winLogo}
+                  alt="nba winners 2023"
+                  className="opponentLogo"
+                />
+              </Link>
               <p style={{ fontSize: 'xxx-large' }}>4-1</p>
-              <img
-                src={heatLogo}
-                alt="logo Miami Heat"
-                className="opponentLogo"
-              />
+              <Link to={'/teams/details/MIA'} className="linkFinalTeam">
+                {' '}
+                <img
+                  src={heatLogo}
+                  alt="logo Miami Heat"
+                  className="opponentLogo"
+                />
+              </Link>
             </div>
             <p>The Nuggets are NBA champs after a Game 5</p>
             <button className="btnVideo" onClick={modalVideo}>
               <p>highlights</p>
               <BsIcons.BsYoutube />
             </button>
-
-            <p>MVP : Nikola Jokic</p>
-            <div className="idMVP">
-              <img src={idMvp} alt="Nikola Jokic" className="idJokic" />
+            <div className="mvpZone">
+              <div className="idMVP">
+                <img src={idMvp} alt="Nikola Jokic" className="idJokic" />
+                <p>MVP : Nikola Jokic</p>
+              </div>
+              <div className="statsAward">
+                <div className="topStat">
+                  <p>Average finals stats</p>
+                </div>
+                <div className="contentStat">
+                  <div className="statRow">
+                    <p className="statTitle">PTS</p>
+                    <p className="statNum">30.2</p>
+                  </div>
+                  <div className="statRow">
+                    <p className="statTitle">REB</p>
+                    <p className="statNum">14</p>
+                  </div>
+                  <div className="statRow">
+                    <p className="statTitle">AST</p>
+                    <p className="statNum">7.2</p>
+                  </div>
+                  <div className="statRow">
+                    <p className="statTitle">FG%</p>
+                    <p className="statNum">58.3</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -112,6 +143,7 @@ export default function Trophies() {
               pictureId={AwardsDatas.MVP.pictureID}
               playerName={AwardsDatas.MVP.name}
               team={AwardsDatas.MVP.team}
+              teamAb={AwardsDatas.MVP.teamAb}
               position={AwardsDatas.MVP.position}
               pictureTeamPlayer={AwardsDatas.MVP.pictureTeamPlayer}
               birth={AwardsDatas.MVP.birth}
@@ -139,6 +171,7 @@ export default function Trophies() {
               pictureId={AwardsDatas.DEF.pictureID}
               playerName={AwardsDatas.DEF.name}
               team={AwardsDatas.DEF.team}
+              teamAb={AwardsDatas.DEF.teamAb}
               position={AwardsDatas.DEF.position}
               pictureTeamPlayer={AwardsDatas.DEF.pictureTeamPlayer}
               birth={AwardsDatas.DEF.birth}
@@ -166,6 +199,7 @@ export default function Trophies() {
               pictureId={AwardsDatas.MAN.pictureID}
               playerName={AwardsDatas.MAN.name}
               team={AwardsDatas.MAN.team}
+              teamAb={AwardsDatas.MAN.teamAb}
               position={AwardsDatas.MAN.position}
               pictureTeamPlayer={AwardsDatas.MAN.pictureTeamPlayer}
               birth={AwardsDatas.MAN.birth}
@@ -193,6 +227,7 @@ export default function Trophies() {
               pictureId={AwardsDatas.CLU.pictureID}
               playerName={AwardsDatas.CLU.name}
               team={AwardsDatas.CLU.team}
+              teamAb={AwardsDatas.CLU.teamAb}
               position={AwardsDatas.CLU.position}
               pictureTeamPlayer={AwardsDatas.CLU.pictureTeamPlayer}
               birth={AwardsDatas.CLU.birth}
@@ -220,6 +255,7 @@ export default function Trophies() {
               pictureId={AwardsDatas.MIP.pictureID}
               playerName={AwardsDatas.MIP.name}
               team={AwardsDatas.MIP.team}
+              teamAb={AwardsDatas.MIP.teamAb}
               position={AwardsDatas.MIP.position}
               pictureTeamPlayer={AwardsDatas.MIP.pictureTeamPlayer}
               birth={AwardsDatas.MIP.birth}
@@ -247,6 +283,7 @@ export default function Trophies() {
               pictureId={AwardsDatas.ROO.pictureID}
               playerName={AwardsDatas.ROO.name}
               team={AwardsDatas.ROO.team}
+              teamAb={AwardsDatas.ROO.teamAb}
               position={AwardsDatas.ROO.position}
               pictureTeamPlayer={AwardsDatas.ROO.pictureTeamPlayer}
               birth={AwardsDatas.ROO.birth}
@@ -274,6 +311,7 @@ export default function Trophies() {
               pictureId={AwardsDatas.COA.pictureID}
               playerName={AwardsDatas.COA.name}
               team={AwardsDatas.COA.team}
+              teamAb={AwardsDatas.COA.teamAb}
               position={AwardsDatas.COA.position}
               pictureTeamPlayer={AwardsDatas.COA.pictureTeamPlayer}
               birth={AwardsDatas.COA.birth}

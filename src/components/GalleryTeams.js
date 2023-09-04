@@ -27,7 +27,6 @@ export default function GalleryTeams() {
     setSelectedTeam(team);
   };
 
-  console.log(datasTeam);
   return (
     <>
       <div className="GalleryTeams">

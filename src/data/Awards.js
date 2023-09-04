@@ -22,6 +22,7 @@ export const AwardsDatas = {
     award: 'Most Valuable Player of the year',
     name: 'Joel Embiid',
     team: '76ers',
+    teamAb: 'PHI',
     position: 'C',
     birth: '3/16/1994 (29yrs)',
     statTitle1: 'PTS',
@@ -44,6 +45,7 @@ export const AwardsDatas = {
     award: 'Defensive Player of the year',
     name: 'Jaren Jackson JR.',
     team: 'Grizzlies',
+    teamAb: 'MEM',
     position: 'PF',
     birth: '9/15/1999 (23yrs)',
     statTitle1: 'PTS',
@@ -66,6 +68,7 @@ export const AwardsDatas = {
     award: 'Sixth Man of the year',
     name: 'Malcolm Brogdon',
     team: 'Celtics',
+    teamAb: 'BOS',
     position: 'PG',
     birth: '12/11/1992 (30yrs)',
     statTitle1: 'PTS',
@@ -88,6 +91,7 @@ export const AwardsDatas = {
     award: 'Clutch Player of the year',
     name: "De'Aaron Fox",
     team: 'Kings',
+    teamAb: 'SAC',
     position: 'PG',
     birth: '12/20/1997 (25yrs)',
     statTitle1: 'PTS',
@@ -110,6 +114,7 @@ export const AwardsDatas = {
     award: 'Most Improved Player of the year',
     name: 'Lauri Markkanen',
     team: 'Jazz',
+    teamAb: 'UTAH',
     position: 'PF',
     birth: '5/22/1997 (26yrs)',
     statTitle1: 'PTS',
@@ -132,6 +137,7 @@ export const AwardsDatas = {
     award: 'Rookie of the year',
     name: 'Paolo Banchero',
     team: 'Magic',
+    teamAb: 'ORL',
     position: 'PF',
     birth: '11/12/2002 (20yrs)',
     statTitle1: 'PTS',
@@ -154,6 +160,7 @@ export const AwardsDatas = {
     award: 'Coach of the year',
     name: 'Mike Brown',
     team: 'Kings',
+    teamAb: 'SAC',
     position: 'Coach',
     birth: '3/5/1970 (53yrs)',
     statTitle1: 'WIN',
@@ -173,10 +180,3 @@ export const AwardsDatas = {
     pictureContains: pictureContainCOA,
   },
 };
-
-/* 
-              pictureId={'img'}
-              pictureTeamPlayer={'img'}
-              pictureContains={'img'}
-
-*/

@@ -14,6 +14,15 @@
 .leftZone {
   width: 40%;
 }
+.rightZone {
+  width: 50%;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 .logo {
   background-color: #ffffff24;
   border-radius: 20px;
@@ -36,33 +45,50 @@
   box-shadow: 10px 5px 5px black;
   border-radius: 5px;
 }
-.zone2 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  height: 200px;
-  overflow: scroll;
-  width: 90%;
-}
 .info img {
   width: 10vw;
 }
-.statList li {
-  list-style: none;
-}
-.statList ul {
-  padding-left: 0%;
-}
-.statList li {
-  margin-bottom: 2vh;
-}
-
 .zone3 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
 }
+.nextGame {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.NGSeason {
+  background-color: #c8202e;
+  padding: 1%;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #f5deb385;
+}
+.NGYears {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  background-color: #1c4588;
+  border-radius: 0 5px 0 0;
+  border: 1px solid #f5deb385;
+}
+.NGName {
+  width: 100%;
+  padding: 1%;
+  background-color: #00000061;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid #f5deb385;
+}
+.NGSeason p,
+.NGYears p,
+.NGName p {
+  margin-bottom: 0%;
+  font-size: 12px;
+}
+
 .parquet {
   background-position: center;
   background-size: cover;
