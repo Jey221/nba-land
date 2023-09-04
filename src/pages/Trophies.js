@@ -22,16 +22,20 @@ import ModalPlay from '../components/ModalPlay';
 
 export default function Trophies() {
   // MISE EN DES BLOCS AWARDS
+  const [allTopBlocs, setAllTopBlocs] = useState([]);
   const [allBlocs, setAllBlocs] = useState([]);
+
   useEffect(() => {
+    setAllTopBlocs(document.querySelectorAll('.topBloc'));
     setAllBlocs(document.querySelectorAll('.bloc'));
   }, []);
-  allBlocs.forEach((bloc) => {
+
+  allTopBlocs.forEach((bloc) => {
     bloc.addEventListener('click', (e) => {
-      e.target.classList.add('active');
+      e.target.offsetParent.classList.add('active');
 
       for (let i = 0; i < allBlocs.length; i++) {
-        if (allBlocs[i] !== e.target) {
+        if (allBlocs[i] !== e.target.offsetParent) {
           allBlocs[i].classList.remove('active');
         }
       }
@@ -42,12 +46,11 @@ export default function Trophies() {
   const [isOpenModalPlay, setIsOpenModalFinal] = useState(false);
   function modalVideo() {
     setIsOpenModalFinal(true);
-    console.log('highlight');
   }
-  console.log(isOpenModalPlay);
+
   return (
     <div>
-      {/* <Loading /> */}
+      <Loading />
       <Header />
       <ScrollBar />
       <div>

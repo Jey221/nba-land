@@ -31,9 +31,6 @@
 .active {
   flex-grow: 1000;
 }
-.bloc * {
-  pointer-events: none;
-}
 .topBloc {
   width: 100%;
   display: flex;
@@ -153,7 +150,6 @@
   padding: 3%;
   cursor: pointer;
   margin: auto;
-  pointer-events: auto;
 }
 .btnVideo:active {
   background: linear-gradient(#c08725, #bdae93);

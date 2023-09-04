@@ -33,12 +33,10 @@ export default function Details() {
       setCurrentTeam(dataDetailTeam.team);
     }
   }, [dataDetailTeam]);
-  console.log(dataDetailTeam);
-  console.log(id);
-  console.log(Abbreviations);
+
   return (
     <div>
-      <Loading />
+      {/* <Loading /> */}
       <Header />
       <div initial="hidden" animate="show">
         <div>
