@@ -38,7 +38,7 @@ export default function GalleryTeams() {
               initial={{ x: 25, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{
-                delay: 5,
+                delay: 1,
                 duration: 0.6,
               }}
               key={team.id}

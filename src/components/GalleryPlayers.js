@@ -68,18 +68,20 @@ export default function GalleryPlayers() {
         />
       </div>
       <div className="GalleryPlayers">
-        <ScrollBar />
         {dataPlayer.map((player) => {
           return (
             <motion.div
               initial={{ x: 25, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{
-                duration: 1,
+                delay: 1,
+                duration: 0.6,
               }}
               className="player"
               key={player.id}
             >
+              <ScrollBar />
+
               <div className="playerCard">
                 <Link onClick={(e) => handleClick(e, player)}>
                   <GiIcons.GiBasketballJersey />

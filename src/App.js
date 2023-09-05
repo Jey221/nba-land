@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
 import './css/App.css';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
@@ -13,6 +12,26 @@ import Trophies from './pages/Trophies';
 
 function App() {
   return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/teams" element={<Teams />} />
+        <Route exact path="/teams/details/:idTeams" element={<Details />} />
+        <Route path="/players" element={<Players />} />
+        <Route path="/trophies" element={<Trophies />} />
+        <Route path="/ranking" element={<Ranking />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
+
+/* 
+import { AnimatePresence, motion } from 'framer-motion';
+
     <AnimatePresence>
       <motion.div
         initial="initialState"
@@ -36,21 +55,9 @@ function App() {
         }}
         className="base-page-size"
       >
-        <div className="App">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/teams" element={<Teams />} />
-            <Route exact path="/teams/details/:idTeams" element={<Details />} />
-            <Route path="/players" element={<Players />} />
-            <Route path="/trophies" element={<Trophies />} />
-            <Route path="/ranking" element={<Ranking />} />
-            <Route path="*" element={<Error />} />
-          </Routes>
-        </div>
-      </motion.div>
-    </AnimatePresence>
-  );
-}
 
-export default App;
+      </motion.div>
+
+    </AnimatePresence>
+
+*/

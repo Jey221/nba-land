@@ -17,7 +17,7 @@
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
   height: max-content;
   min-height: 400px;
 }

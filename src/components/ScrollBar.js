@@ -36,7 +36,7 @@ export default function ScrollBar() {
     height: `${progressHeight}%`,
     opacity: `${progressHeight}%`,
   };
-
+  /*  */
   const handleProgressBarClick = (e) => {
     const newPageScroll =
       (e.clientY / e.currentTarget.offsetHeight) * totalHeight;
