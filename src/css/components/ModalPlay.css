@@ -25,3 +25,9 @@
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 425px) {
+  .modalContentPlay {
+    width: 100%;
+    height: 90%;
+  }
+}

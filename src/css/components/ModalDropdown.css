@@ -44,3 +44,9 @@
 .modalBodyAwards img {
   height: 550px;
 }
+
+@media only screen and (max-width: 375px) {
+  .modalBodyAwards img {
+    height: 195px;
+  }
+}

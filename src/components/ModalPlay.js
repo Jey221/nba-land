@@ -19,7 +19,12 @@ export default function ModalPlay({ setIsOpenModalFinal, url }) {
             </div>
           </header>
           <div className="modalBodyPlay">
-            <ReactPlayer url={url} width="80%" height="300px" />
+            <ReactPlayer
+              className="compReactPlayer"
+              url={url}
+              width={'fit-content'}
+              height={'fit-content'}
+            />
           </div>
         </div>
       </div>

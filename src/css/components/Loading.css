@@ -89,3 +89,17 @@
     transform: scaleX(0.5);
   }
 }
+
+@media only screen and (max-width: 425px) {
+  .zoneLoad {
+    height: 0;
+  }
+  .ball {
+    top: 18px;
+    left: 44%;
+  }
+  .shadow {
+    top: 279px;
+    left: 42%;
+  }
+}

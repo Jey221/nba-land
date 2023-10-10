@@ -40,5 +40,11 @@
 @media only screen and (max-width: 425px) {
   .overlap {
     --overlap: 0.75ch;
+    width: 88%;
+  }
+
+  #logoNbaHome {
+    margin-top: 100px;
+    width: 30%;
   }
 }

@@ -175,3 +175,48 @@
   font-size: 24px;
   fill: red;
 }
+
+@media only screen and (max-width: 768px) {
+  .articles {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sliderZone {
+    width: 90%;
+  }
+  .infoWinnerNba {
+    width: 100%;
+  }
+  .linkFinalTeam {
+    width: 25%;
+  }
+  .opponentFinal p {
+    font-size: 61px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .IDAward img {
+    width: 120px;
+  }
+  .awardsContainer {
+    height: 1120px;
+  }
+  .contenuAward {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .bloc {
+    height: 82px;
+  }
+  .pictureContent {
+    width: 330px;
+  }
+  .infosAward {
+    width: 80vw;
+  }
+  #Coach {
+    width: 190px;
+  }
+}
